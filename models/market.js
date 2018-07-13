@@ -6,16 +6,34 @@ const marketSchema = new Schema({
         type: String,
         required: true
     },
+    Coordinates: {
+        Latitude: {
+            type: String,
+            required: true
+        },
+        Longitude: {
+            type: String,
+            required: true
+        }
+    },
     ZipCode: {
         type: String,
         required: true
     },
     Benefits: {
-        Federal: {
+        Wic: {
             type: Boolean,
             required: true
         },
-        State: {
+        WicCash: {
+            type: Boolean,
+            required: true
+        },
+        Snap: {
+            type: Boolean,
+            required: true
+        },
+        SFMNP: {
             type: Boolean,
             required: true
         }
