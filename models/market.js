@@ -2,6 +2,10 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const marketSchema = new Schema({
+    MarketName: {
+        type: String,
+        required: true
+    },
     Address: {
         type: String,
         required: true
