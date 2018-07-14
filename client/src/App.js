@@ -6,10 +6,12 @@ import Map from './Components/Map';
 class App extends Component {
   render() {
     return (
-      <div>
+    <div>
         <Header />
+        <div className="container">
         <Main />
         <Map />
+        </div>
     </div>
     );
   }
