@@ -77,6 +77,38 @@ const marketSeed = [
         },
         Items: ['Organic','Baked Goods','Flowers','Seafood','Vegetables','Honey','Plants','Poultry','Prepared','Trees','Fruits','Mushrooms']
     },
+    {
+        MarketName: 'Aspen Grove Farmers\' Market',
+        Address: '7301 S Santa Fe Drive, Littleton, Colorado',
+        Coordinates: {
+            Latitude: '39.585505',
+            Longitude: '-105.025219'
+        },
+        ZipCode: '80120',
+        Benefits: {
+            Wic: false,
+            Wiccash: false,
+            Snap: true,
+            SFMNP: false
+        },
+        Items: ['Organic','Baked Goods','Cheese','Crafts','Eggs','Seafood','Herbs','Vegetables','Honey','Jams','Maple','Meat','Nuts','Plants','Poultry','Prepared','Soap','Wine','Coffee','Fruits','Grains','Juices','Mushrooms','Wild Harvested']
+    },
+    {
+        MarketName: 'Bethany Farmers Market',
+        Address: '711 Amity Road, Bethany, Connecticut',
+        Coordinates: {
+            Latitude: '41.4385519',
+            Longitude: '-72.9914827'
+        },
+        ZipCode: '6524',
+        Benefits: {
+            Wic: true,
+            Wiccash: false,
+            Snap: false,
+            SFMNP: true
+        },
+        Items: ['Organic','Baked Goods','Cheese','Crafts','Flowers','Eggs','Vegetables','Honey','Jams','Maple','Plants','Soap','Coffee','Fruits','Juices']
+    },
 ];
 
 db.Market
