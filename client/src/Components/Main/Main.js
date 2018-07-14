@@ -1,9 +1,20 @@
 import React, { Component } from "react";
 
 const Main = () => 
-    <div>
-        <div>This is to hold some stuffs</div>
-        <div></div>
+    <div className="block-top">
+        <div className="row">
+            <div>Looking for snap benefits in your local area? Enter your zipcode below.</div>
+                <div className="formName">
+                <p>Enter Zipcode</p>
+                    <div className="zipcodeSearch">
+                        <form>
+                            <input type="text" className="Textfield-input" />
+                            <button type="button" id="submit-search" class="button">Find Snaps</button>
+                            </form>
+                    
+                    </div>
+            </div>
+        </div>
     </div>
 
 

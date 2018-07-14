@@ -8,11 +8,11 @@ class App extends Component {
     return (
     <div>
         <Header />
+        <div className="container">
         <Main />
         <Map />
+        </div>
     </div>
     );
   }
 }
-
-export default App;

@@ -1,8 +1,37 @@
+.block-top {
+    background-color: #eaeaea;
+    height: 700px;
+
+}
+.container {
+        max-width: 1440px;
+        margin-left: auto;
+        margin-right: auto;
+ 
+
+}
 .fl-left {
     float: left;
 }
 
 .header {
-    background-color: #20B48C;
-    height: 2.8125rem;
+    background-color: #567f5b;
+    height: 3.8125rem;
+}
+
+.row {
+      max-width: 1170px;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 0;
+      margin-bottom: 0;
+}
+
+.zipcodeSearch {
+    position: relative;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    z-index: 600;
 }
