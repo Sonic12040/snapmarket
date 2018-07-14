@@ -6,7 +6,7 @@ import Map from './Components/Map';
 class App extends Component {
   render() {
     return (
-      <div>
+    <div>
         <Header />
         <Main />
         <Map />
