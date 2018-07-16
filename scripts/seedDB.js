@@ -109,6 +109,54 @@ const marketSeed = [
         },
         Items: ['Organic','Baked Goods','Cheese','Crafts','Flowers','Eggs','Vegetables','Honey','Jams','Maple','Plants','Soap','Coffee','Fruits','Juices']
     },
+    {
+        MarketName: 'Milton Farmers\' Market',
+        Address: '6 Village Center Boulevard, Milton, Delaware',
+        Coordinates: {
+            Latitude: '38.769132',
+            Longitude: '-75.310511'
+        },
+        ZipCode: '19968',
+        Benefits: {
+            Wic: true,
+            Wiccash: false,
+            Snap: false,
+            SFMNP: false
+        },
+        Items: ['Baked Goods','Cheese','Crafts','Flowers','Eggs','Seafood','Herbs','Vegetables','Honey','Jams','Meat','Plants','Poultry','Prepared','Soap','Wine','Fruits','Mushrooms','Pet Food']
+    },
+    {
+        MarketName: 'Arcadia\'s Mobile Market',
+        Address: '801 17th Street NE, Washington, District of Columbia',
+        Coordinates: {
+            Latitude: '38.9008251',
+            Longitude: '-76.9781261'
+        },
+        ZipCode: '20002',
+        Benefits: {
+            Wic: true,
+            Wiccash: true,
+            Snap: true,
+            SFMNP: true
+        },
+        Items: ['Organic','Baked Goods','Cheese','Flowers','Eggs','Seafood','Herbs','Vegetables','Honey','Meat','Poultry','Beans','Fruits','Mushrooms']
+    },
+    { // To Be Edited
+        MarketName: 'Bethany Farmers Market',
+        Address: '711 Amity Road, Bethany, Connecticut',
+        Coordinates: {
+            Latitude: '41.4385519',
+            Longitude: '-72.9914827'
+        },
+        ZipCode: '6524',
+        Benefits: {
+            Wic: true,
+            Wiccash: false,
+            Snap: false,
+            SFMNP: true
+        },
+        Items: ['Organic','Baked Goods','Cheese','Crafts','Flowers','Eggs','Vegetables','Honey','Jams','Maple','Plants','Soap','Coffee','Fruits','Juices']
+    },
 ];
 
 db.Market
