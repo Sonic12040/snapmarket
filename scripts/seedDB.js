@@ -140,30 +140,14 @@ const marketSeed = [
             SFMNP: true
         },
         Items: ['Organic','Baked Goods','Cheese','Flowers','Eggs','Seafood','Herbs','Vegetables','Honey','Meat','Poultry','Beans','Fruits','Mushrooms']
-    },
-    { // To Be Edited
-        MarketName: 'Bethany Farmers Market',
-        Address: '711 Amity Road, Bethany, Connecticut',
-        Coordinates: {
-            Latitude: '41.4385519',
-            Longitude: '-72.9914827'
-        },
-        ZipCode: '6524',
-        Benefits: {
-            Wic: true,
-            Wiccash: false,
-            Snap: false,
-            SFMNP: true
-        },
-        Items: ['Organic','Baked Goods','Cheese','Crafts','Flowers','Eggs','Vegetables','Honey','Jams','Maple','Plants','Soap','Coffee','Fruits','Juices']
-    },
+    }
 ];
 
 db.Market
     .remove({})
     .then(() => db.Market.collection.insertMany(marketSeed))
     .then(data => {
-        consolelog(`${data.insertedIds.length} records inserted!`);
+        console.log(`${data.insertedIds.length} records inserted!`);
         process.exit(0);
     })
     .catch(err => {
