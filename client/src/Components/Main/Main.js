@@ -9,7 +9,7 @@ const Main = () =>
                     <div className="zipcodeSearch">
                         <form>
                             <input type="text" className="Textfield-input" />
-                            <button type="button" id="submit-search" class="button">Find Snaps</button>
+                            <button type="button" id="submit-search" className="button">Find Snaps</button>
                             </form>
                     
                     </div>
