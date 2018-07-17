@@ -3,12 +3,12 @@ import React, { Component } from "react";
 
 const Header = () => 
 
-    <header className="height10 t-a-c color-E5DCD1 mt-3em">
-            <div className="t-a-c fs-fredericka">CarrotSnap
+    <div className="height30vh t-a-c bg-E5DCD1 mb-3em">
+            <div className="fs-fredericka color-2D2D2D fs-5em">CarrotSnap
             {/* insert carrot logo here */}
             </div>
-                <p className="fs-didact">find farmer's markets with benefits near you</p>
-    </header>
+                <p className="fs-didact color-2D2D2D">find farmer's markets with benefits near you</p>
+    </div>
 
 
 
