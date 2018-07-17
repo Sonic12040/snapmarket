@@ -1,14 +1,14 @@
-import React, { Component } from "react";
+import React from "react";
 
 
 const Header = () => 
-    <header className="header">
-        <div className="row">
-            <div>This is our navigation bar.
-                <div className="fl-left">This will housed our login</div>
+
+    <div className="height30vh t-a-c bg-E5DCD1 mb-3em">
+            <div className="fs-fredericka color-2D2D2D fs-5em">CarrotSnap
+            {/* insert carrot logo here */}
             </div>
-        </div>
-    </header>
+                <p className="fs-didact color-2D2D2D">find farmer's markets with benefits near you</p>
+    </div>
 
 
 
