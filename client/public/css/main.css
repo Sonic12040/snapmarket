@@ -49,9 +49,7 @@
 }
 
 
-/* B */
 
-/* border */
 .border-box {
     box-sizing: border-box;
 }
@@ -102,6 +100,24 @@
     min-height: calc(100vh - 70px);
 }
 
+/* colors */
+.color-2D2D2D {
+    color: #2D2D2D; 
+}
+.color-FBFEFF {
+    color: #FBFEFF;
+}
+.color-E5DCD1 {
+    color: #E5DCD1;
+}
+.color-8CB8D2 {
+    color: #8CB8D2;
+}
+.color-FFBF77 {
+   color: #FFBF77;
+}
+
+
 /* D */
 
 /* flexbox */
@@ -130,25 +146,20 @@
 
 /* F */ 
 
-.fade-in {
-    opacity: 1;
-    animation-name: fadeInOpacity;
-    animation-iteration-count: 1;
-    animation-timing-function: ease-in;
-    animation-duration: 0.7s;
-}
 
 /* fonts */
 
-.font-233 {
-   color: rgba(233,233,233);
+/* For title */
+.fs-fredericka {
+    font-family: 'Fredericka the Great', cursive;
 }
 
-.font-000 {
-    color: black;
- }
- 
+/* for body */
+.fs-didact {
+    font-family: 'Didact Gothic', sans-serif;
+}
 
+/* font sizes */
 .fs-6rem {
     font-size: 6.25rem; 
 }
@@ -190,24 +201,19 @@
     flex-direction: row;
 }
 
-/* footer */
-.foot {
-    height: 50px;
-}
-
 /* H */
 
-.height100vh {
-    height: 100vh; 
+.height100 {
+    height: 100%; 
 }
-.height90vh {
-    height: 90vh;
+.height90 {
+    height: 90%;
 }
-.height80vh {
-    height: 80vh;
+.height80 {
+    height: 80%;
 }
-.height10vh {
-    height: 10vh; 
+.height10 {
+    height: 10%; 
 }
 
 /* I */
