@@ -33,12 +33,12 @@ class Map extends Component {
 
    render() {
    const MapWithAMarker = compose(
-    withStateHandlers(() => ({
+    withStateHandlers((id) => ({
       isOpen: false,
     }), {
-      onToggleOpen: ({ isOpen }) => () => ({
+      onToggleOpen: ({ isOpen }) => ((id) => ({
         isOpen: !isOpen,
-      })
+      }))
     }),
     withScriptjs,
     withGoogleMap
@@ -47,16 +47,16 @@ class Map extends Component {
         defaultCenter = { { lat:38.8283,lng:-98.5795 } }
         defaultZoom = { 4.6 }
       >
-      
+  
       {this.state.markets.map( market => (
-                <Marker
-                position={{ lat:parseFloat(market.Coordinates.Latitude), lng:parseFloat(market.Coordinates.Longitude)}}
-                onClick={props.onToggleOpen}
-                >
-                {props.isOpen && <InfoWindow onCloseClick={props.onToggleOpen}>
-                  <h1>{market.MarketName}</h1>
-                </InfoWindow>}
-              </Marker>
+          <Marker
+          position={{ lat:parseFloat(market.Coordinates.Latitude), lng:parseFloat(market.Coordinates.Longitude)}}
+          onClick={props.onToggleOpen(market._id)}
+          >
+          {props.isOpen && <InfoWindow onCloseClick={props.onToggleOpen(market._id)}>
+            <h1>{market.MarketName}</h1>
+          </InfoWindow>}
+        </Marker>
       ))
     }
 
