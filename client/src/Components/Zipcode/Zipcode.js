@@ -1,36 +1,17 @@
-// import React, { Component } from "react";
+import React from "react";
+import Form from "../Form";
 
-// class NameForm extends React.Component {
-//     constructor(props) {
-//       super(props);
-//       this.state = {value: ''};
-  
-//       this.handleChange = this.handleChange.bind(this);
-//       this.handleSubmit = this.handleSubmit.bind(this);
-//     }
-  
-//     handleChange(event) {
-//       this.setState({value: event.target.value});
-//     }
-  
-//     handleSubmit(event) {
-//       alert('A zipcode was submitted: ' + this.state.value);
-//       event.preventDefault();
-//     }
-  
-//     render() {
-//       return (
-//         <form onSubmit={this.handleSubmit}>
-//           <label>
-//             Zipcode:
-//             <input type="text" value={this.state.value} onChange={this.handleChange} />
-//           </label>
-//           <input type="submit" value="Submit" />
-//         </form>
-//       );
-//     }
-//   }
-  
+
+
+const Zipcode = () => 
+<div className="formName">
+
+<p>Enter Zipcode</p>
+    <div className="zipcodeSearch">
+        <Form />   
+    
+    </div>
+</div>
 
 
 // export default Zipcode;
