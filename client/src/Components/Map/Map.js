@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import API from './../../utils/API';
+import CarrotIcon from './carrotMapIcon.png';
 const { compose, withStateHandlers } = require("recompose");
 const {
   withScriptjs,
@@ -52,7 +53,7 @@ class Map extends Component {
           <Marker
           position={{ lat:parseFloat(market.Coordinates.Latitude), lng:parseFloat(market.Coordinates.Longitude)}}
           icon={{
-            url: 'https://igx.4sqi.net/img/user/256x256/342353049_VNdsdroY_5DKKSMXJ6NHNtLxD2sc43ljTLf6pGCd3eUUSNb40WSfCbDC6I1hEikkxHYQIPR1v'
+            url: CarrotIcon,
           }}
 
           onClick={props.onToggleOpen(market._id)}
