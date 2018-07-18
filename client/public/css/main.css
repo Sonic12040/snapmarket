@@ -46,15 +46,6 @@
     padding-top: 10px; 
   }
 
-
-
-  /* .button-1 a{
-    color: #8CB8D2;
-    line-height:50px;
-    z-index:2;
-    position:relative;
-  } */
-/* 
   .eff-1{
     width:140px;
     height:50px;
@@ -66,9 +57,20 @@
   .button-1:hover .eff-1{
     top:0;
   }
-  .button-1:hover a{
-    color:#E5DCD1;
+  .button-1:hover {
+    background-color:#E5DCD1;
+  }
+
+
+
+  /* .button-1 a{
+    color: #8CB8D2;
+    line-height:50px;
+    z-index:2;
+    position:relative;
   } */
+/* 
+   */
 
   /* backgrounds */
 .bg-2D2D2D {
