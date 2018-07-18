@@ -51,6 +51,10 @@ class Map extends Component {
       {this.state.markets.map( market => (
           <Marker
           position={{ lat:parseFloat(market.Coordinates.Latitude), lng:parseFloat(market.Coordinates.Longitude)}}
+          icon={{
+            url: 'https://igx.4sqi.net/img/user/256x256/342353049_VNdsdroY_5DKKSMXJ6NHNtLxD2sc43ljTLf6pGCd3eUUSNb40WSfCbDC6I1hEikkxHYQIPR1v'
+          }}
+
           onClick={props.onToggleOpen(market._id)}
           >
           {props.isOpen && <InfoWindow onCloseClick={props.onToggleOpen(market._id)}>
