@@ -1,10 +1,10 @@
 import React from "react";
 
 
-// const Button = () => 
-//     <div>
-//         <div className="button-1"></div>
-//     </div>
+const Button = (props) => 
+    <div>
+        <div className="button-1">{props.name}</div>
+    </div>
 
 
 
@@ -20,32 +20,17 @@ import React from "react";
 
 //   ); 
 
-const Payments = [
-    {
-        name: 'WIC',
-    },
 
-    {
-        name: 'WIC SNAP',
-    },
-    {
-        name: 'SNAP',
-    },
-    {
-        name: 'SFMNP',
-    }
 
-]
-
-const Button = (Payment) => {
-    return (
-      <div>
-        {Payments.map(Payment => {
-          return <div>{Payment}</div>
-        })}
-      </div>
-    )
-  }
+// const Button = (Payment) => {
+//     return (
+//       <div>
+//         {Payments.map(Payment => {
+//           return <div>{Payment}</div>
+//         })}
+//       </div>
+//     )
+//   }
 
 // .map( ( {name} ) => {
 //     return <Button key={Payments.name} />

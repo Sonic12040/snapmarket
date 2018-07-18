@@ -1,12 +1,34 @@
-import React from "react";
+import React, {Component} from "react";
 import Button from "../Button";
 // import Zipcode from "../Zipcode";
 
-const Main = () => 
-<<<<<<< HEAD
-    <div className="block-top">
-        <div className="row">
+class Main extends Component {
+
+    state = {
+    payments: [
+    {
+        name: "WIC"
+    },
+    {
+        name: "WIC SNAP"
+    },
+    {
+        name: "SNAP"
+    }, 
+    {
+        name: "SFMNP"
+    }
+    ]
+    }
+    render() {
+        return(
+
+        <div className="height70vh overflow-h bg-FBFEFF">
+            <div className="t-a-c fs-didact">
             <div>Looking for snap benefits in your local area? Enter your zipcode below.</div>
+            <div className="d-f center">{this.state.payments.map(payment => (
+            <Button name={payment.name} />
+        ))}</div>
                 <div className="formName">
                 <p>Enter Zipcode</p>
                     <div className="zipcodeSearch">
@@ -17,20 +39,13 @@ const Main = () =>
                     
                     </div>
             </div>
-=======
-    <div className="height70vh overflow-h bg-FBFEFF">
-        <div className="t-a-c fs-didact">
-            <div className="mb-1em">Enter your preferences below.</div>
-                <div className="d-f center">
-                    <Button/>
-                    <Button />
-                    <Button />
-                    <Button />
-                </div>
-                {/* <Zipcode /> */}
->>>>>>> 06c7e7b7586de8d0e6adbec4beda11e7c9bb13a6
         </div>
     </div>
+
+        )}
+
+
+}
 
 
 

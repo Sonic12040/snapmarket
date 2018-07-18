@@ -35,18 +35,6 @@
     background-size: cover;
 }
 /* button stuff */
-.button-3 {
-    width:140px;
-    height:50px;
-    border:2px solid;
-    color:  #2D2D2D;
-    text-align:center;
-    cursor:pointer;
-
-    box-sizing:border-box;
-    margin:0 0 40px 50px;
-    position: relative;
-  }
 
   .button-1 {
     box-sizing:border-box;
@@ -55,22 +43,11 @@
     height:50px;
     text-align:center;
     margin:0 0 40px 50px;
+    padding-top: 10px; 
   }
 
 
 
-.button-2{
-    width:140px;
-    height:50px;
-    border:2px solid #34495e;
-    float:left;
-    text-align:center;
-    cursor:pointer;
-    position:relative;
-    box-sizing:border-box;
-    overflow:hidden;
-    margin:0 0 40px 50px;
-  }
   /* .button-1 a{
     color: #8CB8D2;
     line-height:50px;
@@ -257,6 +234,9 @@
 }
 .height30vh {
     height: 30vh; 
+}
+.height25vh {
+    height: 25vh;
 }
 .height600px {
     height: 600px; 
