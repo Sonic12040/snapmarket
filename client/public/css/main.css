@@ -1,6 +1,6 @@
 
 .container {
-        max-width: 1440px;
+        max-width: 3000px;
         margin-left: auto;
         margin-right: auto;
  
@@ -35,10 +35,35 @@
     background-size: cover;
 }
 /* button stuff */
-.button-1 {
+.button-3 {
     width:140px;
     height:50px;
-    border:2px solid #2D2D2D;
+    border:2px solid;
+    color:  #2D2D2D;
+    text-align:center;
+    cursor:pointer;
+
+    box-sizing:border-box;
+    margin:0 0 40px 50px;
+    position: relative;
+  }
+
+  .button-1 {
+    box-sizing:border-box;
+    border:2px solid #34495e;
+    width:140px;
+    height:50px;
+    text-align:center;
+    margin:0 0 40px 50px;
+  }
+
+
+
+.button-2{
+    width:140px;
+    height:50px;
+    border:2px solid #34495e;
+    float:left;
     text-align:center;
     cursor:pointer;
     position:relative;
@@ -46,20 +71,19 @@
     overflow:hidden;
     margin:0 0 40px 50px;
   }
-  .button-1 a{
+  /* .button-1 a{
     color: #8CB8D2;
     line-height:50px;
     z-index:2;
     position:relative;
-  }
-
+  } */
+/* 
   .eff-1{
     width:140px;
     height:50px;
     top:-50px;
     background-color: #8CB8D2;
     position:absolute;
-    transition:all .5s ease;
     z-index:1;
   }
   .button-1:hover .eff-1{
@@ -67,7 +91,7 @@
   }
   .button-1:hover a{
     color:#E5DCD1;
-  }
+  } */
 
   /* backgrounds */
 .bg-2D2D2D {
