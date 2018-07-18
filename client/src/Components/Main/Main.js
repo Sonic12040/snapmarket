@@ -21,11 +21,11 @@ const Main = () =>
     <div className="height70vh overflow-h bg-FBFEFF">
         <div className="t-a-c fs-didact">
             <div className="mb-1em">Enter your preferences below.</div>
-                <div className="d-f center color-2D2D2D">
-                    <Button>WIC</Button>
-                    <Button>WIC SNAP</Button>
-                    <Button>SNAP</Button>
-                    <Button>SFMNP</Button>
+                <div className="d-f center">
+                    <Button/>
+                    <Button />
+                    <Button />
+                    <Button />
                 </div>
                 {/* <Zipcode /> */}
 >>>>>>> 06c7e7b7586de8d0e6adbec4beda11e7c9bb13a6
