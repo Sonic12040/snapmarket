@@ -36,10 +36,11 @@
 }
 /* button stuff */
 
-  .button-1 {
+
+.button-1{
     width:140px;
     height:50px;
-    border:2px solid #34495e;
+    border:2px solid #2D2D2D;
     text-align:center;
     cursor:pointer;
     position:relative;
@@ -47,40 +48,53 @@
     overflow:hidden;
     margin:0 0 40px 50px;
     padding-top: 10px; 
+
   }
 
-  /* .eff-1{
+  .buttonClicked {
+    width:140px;
+    height:50px;
+    border:2px solid #2D2D2D;
+    text-align:center;
+    background-color: #8CB8D2;
+    cursor:pointer;
+    position:relative;
+    box-sizing:border-box;
+    overflow:hidden;
+    margin:0 0 40px 50px;
+    padding-top: 10px; 
+
+  }
+
+
+  /* .button-1 a{
+    font-family:arial;
+    font-size:16px;
+    color:#2D2D2D;
+    text-decoration:none;
+    line-height:50px;
+    transition:all .5s ease;
+    z-index:2;
+    position:relative;
+  }
+  .left-push {
     width:140px;
     height:50px;
     left:-140px;
     background:#8CB8D2;
-    position: relative;
+    position:absolute;
     transition:all .5s ease;
     z-index:1;
-
-  } */
-  .button-1:hover .eff-1{
+  }
+  .button-1:hover .left-push{
     left:0;
   }
-  .button-1:hover a {
-    background-color:#8CB8D2;
+  .button-1:hover a{
+    color:#8CB8D2;
   }
-
-  /* .button-1 a {
-    z-index:2;
-    position:relative;
-  } */
+ */
 
 
-
-  /* .button-1 a{
-    color: #8CB8D2;
-    line-height:50px;
-    z-index:2;
-    position:relative;
-  } */
-/* 
-   */
 
   /* backgrounds */
 .bg-2D2D2D {

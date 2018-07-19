@@ -3,7 +3,7 @@ import React from "react";
 
 const Header = () => 
 
-    <div className="height25vh t-a-c bg-E5DCD1">
+    <div className="height30vh t-a-c bg-E5DCD1">
             <div className="fs-fredericka color-2D2D2D fs-5em">CarrotSnap
             {/* insert carrot logo here */}
             </div>

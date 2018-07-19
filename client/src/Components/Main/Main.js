@@ -18,8 +18,19 @@ class Main extends Component {
     {
         name: "SFMNP"
     }
-    ]
+    ],
+    filter: []
     }
+
+    toggleClass = (newFilter) => {
+        console.log("does this work");
+        const arrayValue = this.state.filter; 
+        arrayValue.push(newFilter);
+        this.setState({ filter: arrayValue });
+
+    };
+
+
     render() {
         return(
 
@@ -27,13 +38,15 @@ class Main extends Component {
             <div className="t-a-c fs-didact">
             <div>Looking for snap benefits in your local area? Enter your zipcode below.</div>
             <div className="d-f center">{this.state.payments.map(payment => (
-            <Button name={payment.name} />
+            <Button name={payment.name} onClick={this.toggleClass} />
         ))}</div>
             <Zipcode />
         </div>
     </div>
 
         )}
+
+
 
 
 }
