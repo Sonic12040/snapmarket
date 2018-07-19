@@ -6,24 +6,30 @@ class Form extends React.Component {
     }
 
     onSubmit = e => {
-        e.preventDefault();
-        this.props.onSubmit(this.state);
-        this.setState({
-            zipcode: ""
-        });
+        //  e.preventDefault();
+        if (e.key === 'Enter') {
+            this.props.onSubmit(this.state);
+            this.setState({
+                zipcode: ""
+            });
+
+        }
+       
     }
 
     render() {
         return (
-            <form>
+            <form className="form-container">
                 <input 
+                id="form-bar"
                 placeholder="Enter your Zipcode" 
                 value={this.state.zipcode}
                 onChange={e => this.setState({ zipcode: e.target.value})}
+                onKeyPress={this.onSubmit}
                  />
 
-                 <button className="button-1" onClick={e => this.onSubmit()}>Submit</button>
-            </form>
+              
+         </form>
         );
     }
 }

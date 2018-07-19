@@ -213,6 +213,49 @@
 .f-bold {
     font-weight: bold;
 }
+/* form */
+
+.form-container {
+    
+    max-width: 60%;
+    display: block;
+    margin: 0 auto;
+    border-bottom: 1px solid #D0CFCE;
+  }
+
+input#form-bar {
+    margin: 0 auto;
+    width: 100%;
+    height: 65px;
+    padding: 0 20px;
+    font-size: 1.5rem;
+    background: transparent;
+    border: 0;
+    outline: none;
+    font-family:inherit;
+}
+
+input#form-bar:focus {
+      transition: 0.35s ease;
+      color: #8CB8D2;
+}
+input#form-bar:-webkit-input-placeholder{
+        transition: opacity 0.45s ease; 
+          opacity: 0;
+       }
+
+input#form-bar:-moz-placeholder {
+        transition: opacity 0.45s ease; 
+          opacity: 0;
+       }
+
+input#form-bar:-ms-placeholder {
+       transition: opacity 0.45s ease; 
+         opacity: 0;
+       }    
+
+
+  
 
 /* flex box */
 
