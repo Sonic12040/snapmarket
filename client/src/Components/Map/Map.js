@@ -32,14 +32,20 @@ class Map extends Component {
     .catch(err => console.log(err));
   }
 
+
    render() {
    const MapWithAMarker = compose(
-    withStateHandlers((id) => ({
+    withStateHandlers(() => ({
       isOpen: false,
+      showInfo: '0'
     }), {
-      onToggleOpen: ({ isOpen }) => ((id) => ({
+      onToggleOpen: ({ isOpen }) => () => ({
         isOpen: !isOpen,
-      }))
+      }),
+      showInfo: ({showInfo,isOpen}) => (a) => ({
+        isOpen: !isOpen,
+        showInfoIndex: a
+      })
     }),
     withScriptjs,
     withGoogleMap
@@ -49,16 +55,17 @@ class Map extends Component {
         defaultZoom = { 4.6 }
       >
   
-      {this.state.markets.map( market => (
+      {this.state.markets.map( (market, index) => (
           <Marker
+          key={index}
           position={{ lat:parseFloat(market.Coordinates.Latitude), lng:parseFloat(market.Coordinates.Longitude)}}
           icon={{
             url: CarrotIcon,
           }}
-
-          onClick={props.onToggleOpen(market._id)}
+          // onClick={props.onToggleOpen(market._id)}
+          onClick={()=>{ props.showInfo(index)} }
           >
-          {props.isOpen && <InfoWindow onCloseClick={props.onToggleOpen(market._id)}>
+          { (props.isOpen && props.showInfoIndex == index ) &&  <InfoWindow id={index} onCloseClick={() => {props.onToggleOpen()}}>
             <h1>{market.MarketName}</h1>
           </InfoWindow>}
         </Marker>
