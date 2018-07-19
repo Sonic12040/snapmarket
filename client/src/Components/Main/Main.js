@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import Button from "../Button";
-// import Zipcode from "../Zipcode";
+import Zipcode from "../Zipcode";
 
 class Main extends Component {
 
@@ -29,16 +29,7 @@ class Main extends Component {
             <div className="d-f center">{this.state.payments.map(payment => (
             <Button name={payment.name} />
         ))}</div>
-                <div className="formName">
-                <p>Enter Zipcode</p>
-                    <div className="zipcodeSearch">
-                        <form>
-                            <input type="text" className="Textfield-input" />
-                            <button type="button" id="submit-search" className="button">Find Snaps</button>
-                            </form>
-                    
-                    </div>
-            </div>
+            <Zipcode />
         </div>
     </div>
 

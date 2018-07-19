@@ -14,4 +14,4 @@ const Zipcode = () =>
 </div>
 
 
-// export default Zipcode;
+export default Zipcode;
