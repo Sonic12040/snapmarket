@@ -60,3 +60,6 @@ app-env.env
 
 # next.js build output
 .next
+
+.vs/slnx.sqlite
+.vs/
