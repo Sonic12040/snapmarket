@@ -7,7 +7,6 @@ const Zipcode = () =>
 <div className="formName">
     <div className="zipcodeSearch">
         <Form />   
-    
     </div>
 </div>
 
