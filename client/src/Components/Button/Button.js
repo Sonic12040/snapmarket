@@ -13,7 +13,7 @@ return(
     <div>
         <div className="button-1" id={props.name} onClick={()=>handleClick()}>
             <div className="left-push"></div>
-            {props.name} 
+            <a className="z-index-3" href="#">{props.name}</a>
         </div>
     </div>
 )

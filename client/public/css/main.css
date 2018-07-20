@@ -7,6 +7,22 @@
 
 }
 
+a:link {
+    text-decoration: none; 
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
 .row {
       max-width: 1170px;
       width: 100%;
@@ -43,11 +59,11 @@
     border:2px solid #2D2D2D;
     text-align:center;
     cursor:pointer;
+    text-decoration: none;
     position:relative;
     box-sizing:border-box;
     overflow:hidden;
     margin:0 0 40px 50px;
-    padding-top: 10px; 
 
   }
 
@@ -62,16 +78,12 @@
     box-sizing:border-box;
     overflow:hidden;
     margin:0 0 40px 50px;
-    padding-top: 10px; 
 
   }
 
 
-  /* .button-1 a{
-    font-family:arial;
-    font-size:16px;
+  .button-1 a{
     color:#2D2D2D;
-    text-decoration:none;
     line-height:50px;
     transition:all .5s ease;
     z-index:2;
@@ -89,10 +101,6 @@
   .button-1:hover .left-push{
     left:0;
   }
-  .button-1:hover a{
-    color:#8CB8D2;
-  }
- */
 
 
 
@@ -200,6 +208,25 @@
 	}
 }
 
+.fade-in2 {
+
+	opacity: 1;
+	animation-name: fadeInOpacity2;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+    animation-duration: 4s;
+    
+}
+
+@keyframes fadeInOpacity2 {
+	0% {
+		opacity: 0;
+    }
+	100% {
+		opacity: 1;
+	}
+}
+
 /* fonts */
 
 /* For title */
@@ -220,7 +247,7 @@
 .fs-5em {
     font-size: 5em;
 }
-.fs-1rem {
+.fs-1-25rem {
     font-size: 1.25rem;
 }
 .fs-1-5rem {
@@ -379,6 +406,12 @@ input[type=password] {
     justify-content: center;
 }
 
+/* L */
+
+.l-h1 {
+    line-height: 0.5;
+}
+
 /* M */
 
 /* margin */
@@ -468,6 +501,9 @@ input[type=password] {
 
 .pad-03em {
     padding: 0.3em;
+}
+.pad-2em {
+    padding: 2em; 
 }
 
 .pad-15px {
@@ -579,6 +615,9 @@ input[type=password] {
 }
 .z-index-2 {
     z-index: 2;
+}
+.z-index-3 {
+    z-index: 3;
 }
 
 /* Animation */
