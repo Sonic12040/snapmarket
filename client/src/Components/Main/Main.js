@@ -36,7 +36,7 @@ class Main extends Component {
 
         <div className="height70vh overflow-h bg-FBFEFF">
             <div className="t-a-c fs-didact">
-            <div>Looking for snap benefits in your local area? Enter your zipcode below.</div>
+            <div className="mb-2em fade-in">enter your preferences below.</div>
             <div className="d-f center">{this.state.payments.map(payment => (
             <Button name={payment.name} onClick={this.toggleClass} />
         ))}</div>
