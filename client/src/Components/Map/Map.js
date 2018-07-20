@@ -56,19 +56,29 @@ class Map extends Component {
       >
   
       {this.state.markets.map( (market, index) => (
+        <div>
+
           <Marker
           key={index}
           position={{ lat:parseFloat(market.Coordinates.Latitude), lng:parseFloat(market.Coordinates.Longitude)}}
           icon={{
             url: CarrotIcon,
           }}
-          // onClick={props.onToggleOpen(market._id)}
           onClick={()=>{ props.showInfo(index)} }
           >
           { (props.isOpen && props.showInfoIndex == index ) &&  <InfoWindow id={index} onCloseClick={() => {props.onToggleOpen()}}>
-            <h1>{market.MarketName}</h1>
+            <div>
+              <h1>{market.MarketName}</h1>
+              <h2>{market.Address}</h2>
+              <h3>Benefits Accepted</h3>
+                <p>Benefits Available Mapped Here!</p>
+              <h3>Items Available</h3>
+                <p>{market.Items}</p>
+            </div>
+
           </InfoWindow>}
         </Marker>
+        </div>
       ))
     }
 
