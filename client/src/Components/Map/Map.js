@@ -4,6 +4,7 @@ import API from './../../utils/API';
 import Marker from './../Marker';
 import CarrotIcon from './carrotMapIcon.png';
 import InfoWindow from './../InfoWindow';
+import ItemList from './../ItemList';
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 
@@ -36,9 +37,17 @@ class Map extends Component {
       address: market.Address,
       zipcode: market.ZipCode,
       benefits: "Benefits Here",
-      items: "Items Here"
+      items: market.Items
     })
   }  
+
+  displayItems = () => {
+    this.state.items.forEach((item) => {
+      <ItemList 
+        item={item}
+      />
+    })
+  }
 
 
   static defaultProps = {
@@ -59,7 +68,7 @@ class Map extends Component {
           address={this.state.address}
           zipcode={this.state.zipcode}
           benefits={this.state.benefits}
-          items={this.state.items}
+          items={this.displayItems()}
         />
         <GoogleMapReact
           bootstrapURLKeys={{ key: API_KEY }}

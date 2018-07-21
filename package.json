@@ -29,7 +29,10 @@
     "express": "^4.16.3",
     "if-env": "^1.0.4",
     "mongoose": "^5.2.3",
-    "react-google-maps": "^9.4.5"
+    "react-google-maps": "^9.4.5",
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.0",
+    "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
     "concurrently": "^3.6.0",
