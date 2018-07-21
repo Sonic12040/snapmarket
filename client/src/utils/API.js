@@ -4,6 +4,7 @@ export default {
             .then(function(res) {
                 return res.json();
           })
-    }
+    },
+    
 }
 
