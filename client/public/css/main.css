@@ -631,6 +631,20 @@ input[type=password] {
     position: relative;
     -webkit-animation:bounce 2s infinite;
   }
+
+/* HEY MEL, YOU WANT TO CHANGE THIS! */
+#infoWindow {
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+    width: 15%;
+    background-color: #eaeaea;
+    min-width: 200px;
+}
+
+#marker {
+    z-index: 999
+}
   
 @-webkit-keyframes bounce {
     0%       { bottom:1px; }

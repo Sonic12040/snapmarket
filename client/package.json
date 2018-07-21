@@ -4,6 +4,7 @@
   "private": true,
   "proxy": "http://localhost:3001",
   "dependencies": {
+    "google-map-react": "^1.0.5",
     "google-maps-react": "^2.0.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
