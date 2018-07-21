@@ -39,14 +39,6 @@ class Map extends Component {
       benefits: "Benefits Here",
       items: market.Items
     })
-  }  
-
-  displayItems = () => {
-    this.state.items.forEach((item) => {
-      <ItemList 
-        item={item}
-      />
-    })
   }
 
 
@@ -68,7 +60,7 @@ class Map extends Component {
           address={this.state.address}
           zipcode={this.state.zipcode}
           benefits={this.state.benefits}
-          items={this.displayItems()}
+          items={this.state.items}
         />
         <GoogleMapReact
           bootstrapURLKeys={{ key: API_KEY }}

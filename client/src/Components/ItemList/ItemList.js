@@ -1,6 +1,10 @@
 import React from 'react';
 
-const ItemList = ({item}) => 
-    <p>{item}</p>
+const ItemList = (props) => 
+    <ul>
+        {props.items.map(i => {
+        return <li>{i}</li>
+        })}
+    </ul>
 
 export default ItemList;
