@@ -23,7 +23,7 @@ const marketSeed = [
         ZipCode: '36542',
         Benefits: {
             Wic: false,
-            Wiccash: false,
+            WicCash: false,
             Snap: false,
             SFMNP: true
         },
@@ -39,7 +39,7 @@ const marketSeed = [
         ZipCode: '85326',
         Benefits: {
             Wic: false,
-            Wiccash: false,
+            WicCash: false,
             Snap: false,
             SFMNP: false
         },
@@ -55,7 +55,7 @@ const marketSeed = [
         ZipCode: '72201',
         Benefits: {
             Wic: false,
-            Wiccash: false,
+            WicCash: false,
             Snap: false,
             SFMNP: false
         },
@@ -71,7 +71,7 @@ const marketSeed = [
         ZipCode: '95132',
         Benefits: {
             Wic: true,
-            Wiccash: false,
+            WicCash: false,
             Snap: true,
             SFMNP: false
         },
@@ -87,7 +87,7 @@ const marketSeed = [
         ZipCode: '80120',
         Benefits: {
             Wic: false,
-            Wiccash: false,
+            WicCash: false,
             Snap: true,
             SFMNP: false
         },
@@ -103,7 +103,7 @@ const marketSeed = [
         ZipCode: '6524',
         Benefits: {
             Wic: true,
-            Wiccash: false,
+            WicCash: false,
             Snap: false,
             SFMNP: true
         },
@@ -119,7 +119,7 @@ const marketSeed = [
         ZipCode: '19968',
         Benefits: {
             Wic: true,
-            Wiccash: false,
+            WicCash: false,
             Snap: false,
             SFMNP: false
         },
@@ -135,7 +135,7 @@ const marketSeed = [
         ZipCode: '20002',
         Benefits: {
             Wic: true,
-            Wiccash: true,
+            WicCash: true,
             Snap: true,
             SFMNP: true
         },

@@ -4,7 +4,6 @@ import API from './../../utils/API';
 import Marker from './../Marker';
 import CarrotIcon from './carrotMapIcon.png';
 import InfoWindow from './../InfoWindow';
-import ItemList from './../ItemList';
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 
@@ -15,7 +14,8 @@ class Map extends Component {
     marketname: "Market Name",
     address: "Address",
     zipcode: 60565,
-    benefits: [],
+    benefits: {},
+    benefitsArray: [],
     items: []
   }
 
@@ -36,9 +36,28 @@ class Map extends Component {
       marketname: market.MarketName,
       address: market.Address,
       zipcode: market.ZipCode,
-      benefits: "Benefits Here",
-      items: market.Items
+      benefits: market.Benefits,
+      items: market.Items,
+      benefitsArray: this.convertBenefitsToArray(market)
     })
+  }
+
+  convertBenefitsToArray = (market) => {
+    let BenefitsArray = [];
+    if (market.Benefits.Wic) {
+      BenefitsArray.push("WIC");
+    };
+    if (market.Benefits.WicCash) {
+      BenefitsArray.push("WICCash");
+    };
+    if (market.Benefits.Snap) {
+      BenefitsArray.push("SNAP");
+    };
+    if (market.Benefits.SFMNP) {
+      BenefitsArray.push("SFMNP");
+    };
+
+    return BenefitsArray;
   }
 
 
@@ -61,6 +80,7 @@ class Map extends Component {
           zipcode={this.state.zipcode}
           benefits={this.state.benefits}
           items={this.state.items}
+          benefitsArray={this.state.benefitsArray}
         />
         <GoogleMapReact
           bootstrapURLKeys={{ key: API_KEY }}
