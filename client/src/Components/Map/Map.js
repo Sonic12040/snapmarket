@@ -20,7 +20,7 @@ class Map extends Component {
   }
 
   // componentDidMount() {
-  //   this.props.searchActions.handleSearch("36542");
+  //   this.props.searchActions.handleSearch("");
   // }
 
 
