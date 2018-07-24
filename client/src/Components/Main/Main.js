@@ -14,7 +14,7 @@ class Main extends Component {
 
     },
     {
-        name: "WIC SNAP",
+        name: "WIC CASH",
 
    
     },

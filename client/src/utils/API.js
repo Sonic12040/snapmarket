@@ -5,6 +5,5 @@ export default {
                 return res.json();
           })
     },
-    
 }
 
