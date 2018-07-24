@@ -9,30 +9,14 @@ module.exports = {
             .catch(err => res.status(422).json(err));
     },
     handleSearch: function(req, res) {
-        console.log("hello from handle search")
+        
+        console.log(req.body.query)
         db.Market 
             .find({ZipCode: req.body.query})
             .then(foundMarkets => {
-                console.log(foundMarkets);
-                if (req.body.filter.length > 0) {
+                console.log(req.body.filter);
 
-                    const results = [];
-
-                    for (let market of foundMarkets){
-                        for (let benefit in market.Benefits) {
-                            
-                            for (let item of req.body.filter) {
-                                if (market.Benefits[benefit].toUpperCase() === item) {
-                                    results.push(market);
-                                } 
-                            }
-                        }
-                    }
-                    console.log(results);
-                    res.json(results);
-                } else {
-                    res.json(foundMarkets);
-                }
+                return res.json(foundMarkets);
 
             })
     }

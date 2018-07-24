@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
-import API from './../../utils/API';
+import {connect} from 'react-redux';
 import Marker from './../Marker';
 import CarrotIcon from './carrotMapIcon.png';
 import InfoWindow from './../InfoWindow';
@@ -19,17 +19,11 @@ class Map extends Component {
     items: []
   }
 
-  componentDidMount() {
-    this.loadMarkets();
-  }
+  // componentDidMount() {
+  //   this.props.searchActions.handleSearch("36542");
+  // }
 
-  loadMarkets = () => {
-    API.getAllMarkets()
-      .then(res =>
-      this.setState({markets: res})
-    )
-    .catch(err => console.log(err));
-  }
+
 
   populateWindow = (market) => {
     this.setState({
@@ -74,14 +68,16 @@ class Map extends Component {
     return (
       // Important! Always set the container height explicitly
       <div style={{ height: '100vh', width: '100%' }}>
-        <InfoWindow 
-          marketname={this.state.marketname}
-          address={this.state.address}
-          zipcode={this.state.zipcode}
-          benefits={this.state.benefits}
-          items={this.state.items}
-          benefitsArray={this.state.benefitsArray}
-        />
+        {this.props.results.map(result => (
+          <InfoWindow 
+            marketname={result.MarketName}
+            address={this.state.address}
+            zipcode={this.state.zipcode}
+            benefits={this.state.benefits}
+            items={this.state.items}
+            benefitsArray={this.state.benefitsArray}
+          />
+        ))}
         <GoogleMapReact
           bootstrapURLKeys={{ key: API_KEY }}
           defaultCenter={this.props.center}
@@ -101,6 +97,13 @@ class Map extends Component {
       </div>
     );
   }
+
 }
 
-export default Map;
+function mapStateToProps(state) {
+  return {
+    results: state.results
+  };
+}
+
+export default connect(mapStateToProps)(Map);
