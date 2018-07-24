@@ -7,7 +7,10 @@ const Zipcode = (props) =>
 <div className="formName">
     <div className="zipcodeSearch">
         <form className="form-container"
+            
             onSubmit={props.onSubmit}>
+
+           
 
             <input 
                 id="form-bar"
@@ -16,7 +19,7 @@ const Zipcode = (props) =>
                 onChange={props.onSearchChange}
             />
 
-                 <a href="#" type="submit"><img  alt="search" className="search-icon" src={searchIcon} /></a>
+                 <a href="#MapScroll" type="submit"><img  alt="search" className="search-icon" src={searchIcon} /></a>
          </form>  
     </div>
 </div>

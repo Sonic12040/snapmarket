@@ -334,7 +334,12 @@ input#form-bar:-ms-placeholder {
 
 /* footer */
 .foot {
-    height: 50px;
+    height: 100px;
+    color: #2D2D2D; 
+    margin: auto;
+    padding-top: 2vh;
+    text-align: center;
+    background-color: #E5DCD1;
 }
 
 /* H */
@@ -414,6 +419,11 @@ input[type=password] {
 
 .l-h1 {
     line-height: 0.5;
+}
+
+.logo-carrot {
+    width: 80px;
+    height: auto;
 }
 
 /* M */
@@ -565,10 +575,10 @@ input[type=password] {
 .search-icon{
     position: relative;
     float: right;
-    width: 75px;
-    height: 75px;
-    top: -62px;
-    right: -10px;
+    width: 100px;
+    height: 100px;
+    top: -80px;
+    right: -20px;
   }
   
   
