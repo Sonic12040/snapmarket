@@ -71,10 +71,10 @@ class Map extends Component {
         {this.props.results.map(result => (
           <InfoWindow 
             marketname={result.MarketName}
-            address={this.state.address}
-            zipcode={this.state.zipcode}
-            benefits={this.state.benefits}
-            items={this.state.items}
+            address={result.Address}
+            zipcode={result.ZipCode}
+            benefits={result.Benefits}
+            items={result.Items}
             benefitsArray={this.state.benefitsArray}
           />
         ))}
@@ -83,7 +83,7 @@ class Map extends Component {
           defaultCenter={this.props.center}
           defaultZoom={this.props.zoom}
         >
-        {this.state.markets.map((market, index) => (
+      {this.props.results.map((market, index) => (
           <Marker
             key={index}
             lat={market.Coordinates.Latitude}
@@ -93,6 +93,7 @@ class Map extends Component {
             onClick={()=>{this.populateWindow(market)}}
           />
         ))}
+      
         </GoogleMapReact>
       </div>
     );
