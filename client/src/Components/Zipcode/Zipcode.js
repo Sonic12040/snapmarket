@@ -1,4 +1,5 @@
 import React from "react";
+import searchIcon from './search-icon.png';
 
 
 
@@ -15,7 +16,7 @@ const Zipcode = (props) =>
                 onChange={props.onSearchChange}
             />
 
-              
+                 <a href="#" type="submit"><img  alt="search" className="search-icon" src={searchIcon} /></a>
          </form>  
     </div>
 </div>
