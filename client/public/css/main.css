@@ -267,7 +267,7 @@ a:active {
 
 .form-container {
     
-    max-width: 60%;
+    max-width: 58%;
     display: block;
     margin: 0 auto;
     border-bottom: 1px solid #D0CFCE;
@@ -277,7 +277,7 @@ input#form-bar {
     margin: 0 auto;
     width: 100%;
     height: 65px;
-    padding: 0 20px;
+    padding: 0 10px; 
     font-size: 1.5rem;
     background: transparent;
     border: 0;
@@ -334,7 +334,12 @@ input#form-bar:-ms-placeholder {
 
 /* footer */
 .foot {
-    height: 50px;
+    height: 100px;
+    color: #2D2D2D; 
+    margin: auto;
+    padding-top: 2vh;
+    text-align: center;
+    background-color: #E5DCD1;
 }
 
 /* H */
@@ -416,6 +421,11 @@ input[type=password] {
     line-height: 0.5;
 }
 
+.logo-carrot {
+    width: 80px;
+    height: auto;
+}
+
 /* M */
 
 /* margin */
@@ -492,6 +502,8 @@ input[type=password] {
 
 
 
+
+
 /* N */
 
 
@@ -559,6 +571,17 @@ input[type=password] {
 }
 
 /* S */
+
+.search-icon{
+    position: relative;
+    float: right;
+    width: 100px;
+    height: 100px;
+    top: -80px;
+    right: -20px;
+  }
+  
+  
 
 /* flexbox */
 .s-b {
