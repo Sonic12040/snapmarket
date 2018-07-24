@@ -15,7 +15,8 @@ class Map extends Component {
     address: "Address",
     zipcode: 60565,
     benefits: {},
-    benefitsArray: [],
+    // benefitsArray: [],
+    benefitsArray: "",
     items: []
   }
 
@@ -26,33 +27,35 @@ class Map extends Component {
 
 
   populateWindow = (market) => {
+    console.log('this is the market.query', market.query);
     this.setState({
       marketname: market.MarketName,
       address: market.Address,
       zipcode: market.ZipCode,
       benefits: market.Benefits,
       items: market.Items,
-      benefitsArray: this.convertBenefitsToArray(market)
+      // benefitsArray: this.convertBenefitsToArray(market)
+      benefitsArray: market.benefitsArray
     })
   }
 
-  convertBenefitsToArray = (market) => {
-    let BenefitsArray = [];
-    if (market.Benefits.Wic) {
-      BenefitsArray.push("WIC");
-    };
-    if (market.Benefits.WicCash) {
-      BenefitsArray.push("WICCash");
-    };
-    if (market.Benefits.Snap) {
-      BenefitsArray.push("SNAP");
-    };
-    if (market.Benefits.SFMNP) {
-      BenefitsArray.push("SFMNP");
-    };
+  // convertBenefitsToArray = (market) => {
+  //   let BenefitsArray = [];
+  //   if (market.Benefits.Wic) {
+  //     BenefitsArray.push("WIC");
+  //   };
+  //   if (market.Benefits.WicCash) {
+  //     BenefitsArray.push("WICCash");
+  //   };
+  //   if (market.Benefits.Snap) {
+  //     BenefitsArray.push("SNAP");
+  //   };
+  //   if (market.Benefits.SFMNP) {
+  //     BenefitsArray.push("SFMNP");
+  //   };
 
-    return BenefitsArray;
-  }
+  //   return BenefitsArray;
+  // }
 
 
   static defaultProps = {
@@ -65,9 +68,11 @@ class Map extends Component {
   };
 
   render() {
+    
     return (
       // Important! Always set the container height explicitly
       <div style={{ height: '100vh', width: '100%' }}>
+
         {this.props.results.map(result => (
           <InfoWindow 
             marketname={result.MarketName}
@@ -75,7 +80,8 @@ class Map extends Component {
             zipcode={result.ZipCode}
             benefits={result.Benefits}
             items={result.Items}
-            benefitsArray={this.state.benefitsArray}
+            // benefitsArray={this.state.benefitsArray}
+            benefitsArray={result.benefitsArray}
           />
         ))}
         <GoogleMapReact
@@ -103,7 +109,8 @@ class Map extends Component {
 
 function mapStateToProps(state) {
   return {
-    results: state.results
+    results: state.results,
+    query: state.query.filter //new
   };
 }
 
