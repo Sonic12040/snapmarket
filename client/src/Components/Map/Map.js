@@ -15,10 +15,10 @@ class Map extends Component {
     address: "Address",
     zipcode: 60565,
     benefits: {},
-    // benefitsArray: [],
-    benefitsArray: "",
-    items: []
-  }
+    benefitsArray: [],
+    items: [],
+    showResults: false
+    }
 
   // componentDidMount() {
   //   this.props.searchActions.handleSearch("");
@@ -26,36 +26,19 @@ class Map extends Component {
 
 
 
-  populateWindow = (market) => {
-    console.log('this is the market.query', market.query);
-    this.setState({
-      marketname: market.MarketName,
-      address: market.Address,
-      zipcode: market.ZipCode,
-      benefits: market.Benefits,
-      items: market.Items,
-      // benefitsArray: this.convertBenefitsToArray(market)
-      benefitsArray: market.benefitsArray
-    })
-  }
+  // populateWindow = (market) => {
+  //   console.log('this is the market.query', market.query);
+  //   this.setState({
+  //     marketname: market.MarketName,
+  //     address: market.Address,
+  //     zipcode: market.ZipCode,
+  //     benefits: market.Benefits,
+  //     items: market.Items,
+  //     benefitsArray: this.convertBenefitsToArray(market)
 
-  // convertBenefitsToArray = (market) => {
-  //   let BenefitsArray = [];
-  //   if (market.Benefits.Wic) {
-  //     BenefitsArray.push("WIC");
-  //   };
-  //   if (market.Benefits.WicCash) {
-  //     BenefitsArray.push("WICCash");
-  //   };
-  //   if (market.Benefits.Snap) {
-  //     BenefitsArray.push("SNAP");
-  //   };
-  //   if (market.Benefits.SFMNP) {
-  //     BenefitsArray.push("SFMNP");
-  //   };
-
-  //   return BenefitsArray;
+  //   })
   // }
+
 
 
   static defaultProps = {
@@ -68,22 +51,24 @@ class Map extends Component {
   };
 
   render() {
-    
+
     return (
       // Important! Always set the container height explicitly
       <div style={{ height: '100vh', width: '100%' }}>
+{/* //if else around info window. if I have props that are good show window, else show error div */}
+{ this.state.showResults ? true : false }
+  {this.props.results.map(result => (
+    <InfoWindow
+      marketname={result.MarketName}
+      address={result.Address}
+      zipcode={result.ZipCode}
+      benefits={result.Benefits}
+      items={result.Items}
+      benefitsArray={this.props.benefitsArray}
+      showResults={this.props.showResults}
+    />
+  ))}
 
-        {this.props.results.map(result => (
-          <InfoWindow 
-            marketname={result.MarketName}
-            address={result.Address}
-            zipcode={result.ZipCode}
-            benefits={result.Benefits}
-            items={result.Items}
-            // benefitsArray={this.state.benefitsArray}
-            benefitsArray={result.benefitsArray}
-          />
-        ))}
         <GoogleMapReact
           bootstrapURLKeys={{ key: API_KEY }}
           defaultCenter={this.props.center}
@@ -99,7 +84,7 @@ class Map extends Component {
             onClick={()=>{this.populateWindow(market)}}
           />
         ))}
-      
+
         </GoogleMapReact>
       </div>
     );
@@ -108,10 +93,13 @@ class Map extends Component {
 }
 
 function mapStateToProps(state) {
+  console.log(state.benefitsArray, "map.js 93");
   return {
     results: state.results,
-    query: state.query.filter //new
+    benefitsArray: state.benefitsArray,
+    showResults: state.showResults,
   };
 }
+
 
 export default connect(mapStateToProps)(Map);
