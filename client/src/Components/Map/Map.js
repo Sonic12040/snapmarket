@@ -69,7 +69,7 @@ class Map extends Component {
       // Important! Always set the container height explicitly
       <div style={{ height: '100vh', width: '100%' }}>
         {this.props.results.map(result => (
-          <InfoWindow 
+          <InfoWindow
             marketname={result.MarketName}
             address={result.Address}
             zipcode={result.ZipCode}
@@ -93,7 +93,7 @@ class Map extends Component {
             onClick={()=>{this.populateWindow(market)}}
           />
         ))}
-      
+
         </GoogleMapReact>
       </div>
     );
