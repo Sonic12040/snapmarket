@@ -9,23 +9,23 @@ class Main extends Component {
     state = {
     payments: [
     {
-        name: "WIC",
-
-
-    },
-    {
-        name: "WIC CASH",
-
+        displayName: "WIC",
+        name: "Wic"
 
     },
     {
-        name: "SNAP",
+        displayName: "WIC CASH",
+        name: "WicCash"
 
+    },
+    {
+        displayName: "SNAP",
+        name: "Snap"
 
     },
     {
         name: "SFMNP",
-
+        displayName: "SFMNP"
 
     }
     ],
@@ -35,21 +35,39 @@ class Main extends Component {
 
     toggleClass = (newFilter) => {
         //if statement to not duplicate
-        if (!this.state.filter.includes(newFilter)) {
+        if (!this.state.payments.displayName.filter.includes(newFilter)) {
 
             // console log is returning names correctly
-            const paymentArray = this.state.filter;
+            const paymentArray = this.state.payments.displayName.filter;
             paymentArray.push(newFilter);
             this.setState({ filter: paymentArray });
         } else {
-            const removeIndex = this.state.filter.indexOf(newFilter);
+            const removeIndex = this.state.payments.displayName.filter.indexOf(newFilter);
             console.log(removeIndex);
             this.setState({
-                filter: this.state.filter.filter(item => item !== newFilter)
+                filter: this.state.payments.displayName.filter.filter(item => item !== newFilter)
             })
 
         }
     };
+
+    // toggleClass = (newFilter) => {
+    //     //if statement to not duplicate
+    //     if (!this.state.filter.includes(newFilter)) {
+
+    //         // console log is returning names correctly
+    //         const paymentArray = this.state.filter;
+    //         paymentArray.push(newFilter);
+    //         this.setState({ filter: paymentArray });
+    //     } else {
+    //         const removeIndex = this.state.filter.indexOf(newFilter);
+    //         console.log(removeIndex);
+    //         this.setState({
+    //             filter: this.state.filter.filter(item => item !== newFilter)
+    //         })
+
+    //     }
+    // };
 
     onSubmit = event => {
         event.preventDefault();
