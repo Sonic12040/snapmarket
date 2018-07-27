@@ -102,7 +102,7 @@ class Map extends Component {
 }
 
 function mapStateToProps(state) {
-  console.log(state.benefitsArray, "map.js 93");
+  console.log('state.benefitsArray', state.benefitsArray);
   return {
     results: state.results,
     benefitsArray: state.benefitsArray,

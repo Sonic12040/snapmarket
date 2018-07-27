@@ -16,29 +16,29 @@ class Main extends Component {
     {
         name: "WIC CASH",
 
-   
+
     },
     {
         name: "SNAP",
 
-        
-    }, 
+
+    },
     {
         name: "SFMNP",
 
-        
+
     }
     ],
     filter: [],
     query: "",
     }
-    
+
     toggleClass = (newFilter) => {
         //if statement to not duplicate
         if (!this.state.filter.includes(newFilter)) {
-            
+
             // console log is returning names correctly
-            const paymentArray = this.state.filter; 
+            const paymentArray = this.state.filter;
             paymentArray.push(newFilter);
             this.setState({ filter: paymentArray });
         } else {
@@ -47,7 +47,7 @@ class Main extends Component {
             this.setState({
                 filter: this.state.filter.filter(item => item !== newFilter)
             })
-            
+
         }
     };
 
@@ -73,9 +73,9 @@ class Main extends Component {
     render() {
 
         if(this.state.value === 'true') {
-            console.log(this.state.value)
+            console.log('this.state.value', this.state.value)
         }
-        console.log(this.state.filter); 
+        console.log("this.state.filter", this.state.filter);
         return(
 
         <div className="height70vh overflow-h bg-FBFEFF l-h1">
