@@ -34,7 +34,7 @@ const filterMarket = (userButton, filter) => {
 const initialState = {query: "", results: [], benefitsArray: []};
 
 const reducer = (state = initialState, action) => {
-console.log(initialState);
+console.log('Initial State', initialState);
 
     switch(action.type) {
         case "HANDLE_SEARCH":
