@@ -16,8 +16,9 @@ class Map extends Component {
     zipcode: 60565,
     benefits: {},
     benefitsArray: [],
-    items: []
-  }
+    items: [],
+    showResults: false
+    }
 
   // componentDidMount() {
   //   this.props.searchActions.handleSearch("");
@@ -25,34 +26,19 @@ class Map extends Component {
 
 
 
-  populateWindow = (market) => {
-    this.setState({
-      marketname: market.MarketName,
-      address: market.Address,
-      zipcode: market.ZipCode,
-      benefits: market.Benefits,
-      items: market.Items,
-      benefitsArray: this.convertBenefitsToArray(market)
-    })
-  }
+  // populateWindow = (market) => {
+  //   console.log('this is the market.query', market.query);
+  //   this.setState({
+  //     marketname: market.MarketName,
+  //     address: market.Address,
+  //     zipcode: market.ZipCode,
+  //     benefits: market.Benefits,
+  //     items: market.Items,
+  //     benefitsArray: this.convertBenefitsToArray(market)
 
-  convertBenefitsToArray = (market) => {
-    let BenefitsArray = [];
-    if (market.Benefits.Wic) {
-      BenefitsArray.push("WIC");
-    };
-    if (market.Benefits.WicCash) {
-      BenefitsArray.push("WICCash");
-    };
-    if (market.Benefits.Snap) {
-      BenefitsArray.push("SNAP");
-    };
-    if (market.Benefits.SFMNP) {
-      BenefitsArray.push("SFMNP");
-    };
+  //   })
+  // }
 
-    return BenefitsArray;
-  }
 
 
   static defaultProps = {
@@ -65,19 +51,33 @@ class Map extends Component {
   };
 
   render() {
+
     return (
       // Important! Always set the container height explicitly
       <div style={{ height: '100vh', width: '100%' }}>
-        {this.props.results.map(result => (
-          <InfoWindow
-            marketname={result.MarketName}
-            address={result.Address}
-            zipcode={result.ZipCode}
-            benefits={result.Benefits}
-            items={result.Items}
-            benefitsArray={this.state.benefitsArray}
-          />
-        ))}
+
+{/* // { this.state.showResults ? true : false } */}
+{/* // logic behind this: conditional needs to wrap .map function around InfoWindow in map, because that info won’t even display if there are no matching markets..   */}
+{this.props.showResults ? (
+<div>
+ {this.props.results.map(result => (
+    <InfoWindow
+      marketname={result.MarketName}
+      address={result.Address}
+      zipcode={result.ZipCode}
+      benefits={result.Benefits}
+      items={result.Items}
+      benefitsArray={this.props.benefitsArray}
+      showResults={this.props.showResults}
+    />
+  ))}
+  </div>
+) :  (
+<p>FAIL</p>
+)
+}
+
+
         <GoogleMapReact
           bootstrapURLKeys={{ key: API_KEY }}
           defaultCenter={this.props.center}
@@ -102,9 +102,13 @@ class Map extends Component {
 }
 
 function mapStateToProps(state) {
+  console.log(state.benefitsArray, "map.js 93");
   return {
-    results: state.results
+    results: state.results,
+    benefitsArray: state.benefitsArray,
+    showResults: state.showResults,
   };
 }
+
 
 export default connect(mapStateToProps)(Map);

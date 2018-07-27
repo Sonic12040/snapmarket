@@ -19,7 +19,7 @@ const Zipcode = (props) =>
                 onChange={props.onSearchChange}
             />
 
-                 <a href="#" type="submit"><img  alt="search" className="search-icon" src={searchIcon} /></a>
+                 <a href="/" type="submit"><img  alt="search" className="search-icon" src={searchIcon} /></a>
          </form>  
     </div>
 </div>

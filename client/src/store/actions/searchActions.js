@@ -1,11 +1,15 @@
-
-
 export const handleSearch = (query) => dispatch => {
+
+const {
+    filter,
+}
+= query
+
     fetch('/api/market/handlesearch', {
-        method: "POST",  
+        method: "POST",
         headers: {
             'Content-Type': 'application/json'
-        },      
+        },
         body: JSON.stringify(query), // body data type must match "Content-Type" header
     })
     .then(function(response) {
@@ -15,6 +19,7 @@ export const handleSearch = (query) => dispatch => {
         const payload = {
             results: data,
             query: query,
+            filter,
         }
         dispatch({
             type: "HANDLE_SEARCH",
@@ -22,6 +27,6 @@ export const handleSearch = (query) => dispatch => {
         });
     })
     .catch(err => {
-        console.log("error in handle search");
+        console.log("error in handle search", err);
     })
 }
