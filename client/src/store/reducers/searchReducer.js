@@ -21,13 +21,12 @@ const convertBenefitsToArray = (market) => {
 
 
 const filterMarket = (userButton, filter) => {
-    const nestedArray = Object.entries(userButton); //userButton is an object with key-value pairs for selected benefits - boolean
     const testArrayResult = []; //holds the keys from userButton where the value is true
-    nestedArray.forEach(subArray => {
-        if (subArray[1] === true) {
-            testArrayResult.push(subArray[0]);
+    for (const key in userButton) {
+        if (userButton[key] === true) {
+            testArrayResult.push(key)
         }
-    }); //logic to check for value and push key
+    }
     console.log('Test Array Result', testArrayResult); //console log check of the result
     filter.forEach(benefit => { //filter is an array of the benefits a market accepts
         if (testArrayResult.includes(benefit)) {
