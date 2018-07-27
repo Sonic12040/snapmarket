@@ -55,9 +55,12 @@ class Map extends Component {
     return (
       // Important! Always set the container height explicitly
       <div style={{ height: '100vh', width: '100%' }}>
-{/* //if else around info window. if I have props that are good show window, else show error div */}
-{ this.state.showResults ? true : false }
-  {this.props.results.map(result => (
+
+{/* // { this.state.showResults ? true : false } */}
+{/* // logic behind this: conditional needs to wrap .map function around InfoWindow in map, because that info won’t even display if there are no matching markets..   */}
+{this.props.showResults ? (
+<div>
+ {this.props.results.map(result => (
     <InfoWindow
       marketname={result.MarketName}
       address={result.Address}
@@ -68,6 +71,12 @@ class Map extends Component {
       showResults={this.props.showResults}
     />
   ))}
+  </div>
+) :  (
+<p>FAIL</p>
+)
+}
+
 
         <GoogleMapReact
           bootstrapURLKeys={{ key: API_KEY }}

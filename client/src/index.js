@@ -24,7 +24,7 @@ const store = createStore(searchReducer, compose(
 ));
 
 const wholeStore = () => {
-    console.log("line 27 on index.js", store.getState())
+    console.log("this is testing to see if the arrays match", store.getState())
     store.getState()
 }
 

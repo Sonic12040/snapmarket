@@ -1,13 +1,8 @@
-
-
 export const handleSearch = (query) => dispatch => {
 
 const {
-
     filter,
-
 }
-
 = query
 
     fetch('/api/market/handlesearch', {

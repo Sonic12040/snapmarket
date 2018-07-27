@@ -20,15 +20,19 @@ const convertBenefitsToArray = (market) => {
 
 
 
-const filterMarket = (button, filter) => {
-    const array = Object.entries(button).map((key) => key[1]);
-    return filter.some(key => key === array);
+const filterMarket = (userButton, filter) => {
+    const array = Object.entries(userButton).map((key) => key[1]);
+    // const array = Object.entries(userButton).map((key) => key[1] >-1); // for testing
+return filter.some(key => key === array);
+    // return filter.some(key => key === array); // original line, always returns false
+        // return filter.every(key => key !== array); // test line, always returns true
 }
 
 const initialState = {query: "", results: [], benefitsArray: []};
 
 const reducer = (state = initialState, action) => {
 console.log(initialState);
+
     switch(action.type) {
         case "HANDLE_SEARCH":
             return {
@@ -38,8 +42,8 @@ console.log(initialState);
                 benefitsArray: convertBenefitsToArray(action.payload.results[0].Benefits),
                 showResults: filterMarket(action.payload.results[0].Benefits, action.payload.filter),
 
-
             }
+
         default:
             return state;
     }
