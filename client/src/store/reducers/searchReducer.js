@@ -25,7 +25,7 @@ const filterMarket = (userButton, filter) => {
         console.log('key', key);
         console.log('filter', filter);
         if (userButton[key] === true) {
-            if (filter.includes(key) {
+            if (filter.includes(key)) {
                 console.log('returning true');
                 return true;
             }
