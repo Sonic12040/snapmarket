@@ -9,6 +9,23 @@ const API_KEY = process.env.REACT_APP_API_KEY;
 
 
 class Map extends Component {
+
+  //toggle function
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {isToggleOn: true};
+
+    // This binding is necessary to make `this` work in the callback
+  //   this.handleClick = this.handleClick.bind(this);
+  // }
+
+  // handleClick() {
+  //   this.setState(prevState => ({
+  //     isToggleOn: !prevState.isToggleOn
+  //   }));
+  // }
+
+
   state = {
     markets: [],
     marketname: "Market Name",
@@ -20,20 +37,19 @@ class Map extends Component {
     showResults: false
     }
 
-    //need to write toggle function.
-// this would be for a button pressing a carrot
-  populateWindow = (market) => {
-    console.log('this is the market.query', market.query);
-    this.setState({
-      marketname: market.MarketName,
-      address: market.Address,
-      zipcode: market.ZipCode,
-      benefits: market.Benefits,
-      items: market.Items,
-      benefitsArray: this.convertBenefitsToArray(market)
+  // populateWindow = (market) => {
+  //   console.log('this is the market.query', market.query);
+  //   this.setState({
+  //     marketname: market.MarketName,
+  //     address: market.Address,
+  //     zipcode: market.ZipCode,
+  //     benefits: market.Benefits,
+  //     items: market.Items,
+  //     benefitsArray: this.convertBenefitsToArray(market)
 
-    })
-  }
+  //   })
+  // }
+
 
 
 
@@ -52,8 +68,7 @@ class Map extends Component {
       // Important! Always set the container height explicitly
       <div style={{ height: '100vh', width: '100%' }}>
 
-{/* // { this.state.showResults ? true : false } */}
-{/* // logic behind this: conditional needs to wrap .map function around InfoWindow in map, because that info won’t even display if there are no matching markets..   */}
+{/* // ternary function to show market, or give message that there are no markets*/}
 {this.props.showResults ? (
 <div>
  {this.props.results.map(result => (
@@ -77,6 +92,8 @@ class Map extends Component {
           defaultCenter={this.props.center}
           defaultZoom={this.props.zoom}
         >
+      {/* {this.state.isToggleOn ? 'ON' : 'OFF' (
+        <div> */}
       {this.props.results.map((market, index) => (
           <Marker
             key={index}
@@ -85,9 +102,12 @@ class Map extends Component {
             image={CarrotIcon}
             alttext={market.MarketName}
             onClick={()=>{this.populateWindow(market)}}
+            // onClick={this.handleClick}
           />
         ))}
-
+        {/* </div>
+      )
+      } */}
         </GoogleMapReact>
       </div>
     );
