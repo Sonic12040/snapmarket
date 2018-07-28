@@ -31,7 +31,7 @@ const filterMarket = (userButton, filter) => {
     return false;
 }
 
-const initialState = {query: "", results: [], benefitsArray: []};
+const initialState = {query: "", results: [], benefitsArray: [], targetedMarket: null};
 
 const reducer = (state = initialState, action) => {
 console.log('Initial State', initialState);
@@ -44,6 +44,25 @@ console.log('Initial State', initialState);
                 results: action.payload.results,
                 benefitsArray: convertBenefitsToArray(action.payload.results[0].Benefits),
                 showResults: filterMarket(action.payload.results[0].Benefits, action.payload.filter),
+
+            };
+        case "TARGET_MARKET":
+            // work thru results array to find whatever the market is with the matching address
+            //find the object in the results array that has the same Address as the payload. if statement to return null?
+            const target = state.results.filter(item => {
+                // match item.Address to action.payload
+
+                console.log('Success!');
+                if (item.Address === action.payload) {
+                    console.log('ITEM', item);
+                    return item;
+                } else {
+                    return null;
+                }
+            });
+            return {
+                ...state,
+                targetedMarket: target
 
             }
 
