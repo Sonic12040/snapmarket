@@ -79,7 +79,7 @@ handleClick() {
         />
       ))
     }
-    displayContent = null;
+
     </div>
     } else {
       return <InfoWindow
