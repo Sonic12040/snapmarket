@@ -84,11 +84,11 @@ handleClick() {
     } else {
       return <InfoWindow
           marketname={"No Market"}
-          address={"No Market"}
-          zipcode={"Nein Markketten"}
-          benefits={"No bazaars"}
-          items={["Nothing", "Nada", "Bubkes"]}
-          benefitsArray={["WicWicSnap"]}
+          address={""}
+          zipcode={""}
+          benefits={""}
+          items={[""]}
+          benefitsArray={[""]}
           showResults={this.props.showResults}
         />
     }
