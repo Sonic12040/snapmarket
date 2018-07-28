@@ -26,6 +26,12 @@ class Map extends Component {
   // }
 
 
+handleClick() {
+    this.setState({
+      condition: !this.state.condition
+    });
+  }
+
   state = {
     markets: [],
     marketname: "Market Name",
@@ -71,7 +77,7 @@ class Map extends Component {
 {/* // ternary function to show market, or give message that there are no markets*/}
 {this.props.showResults ? (
 <div>
- {this.props.results.map(result => (
+ const infoWindow = {this.props.results.map(result => (
     <InfoWindow
       marketname={result.MarketName}
       address={result.Address}
@@ -101,8 +107,8 @@ class Map extends Component {
             lng={market.Coordinates.Longitude}
             image={CarrotIcon}
             alttext={market.MarketName}
-            onClick={()=>{this.populateWindow(market)}}
-            // onClick={this.handleClick}
+            // onClick={()=>{this.populateWindow(market)}}
+            onClick={ this.handleClick }
           />
         ))}
         {/* </div>
