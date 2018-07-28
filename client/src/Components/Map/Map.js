@@ -20,12 +20,10 @@ class Map extends Component {
     showResults: false
     }
 
-  // componentDidMount() {
-  //   this.props.searchActions.handleSearch("");
-  // }
 
 
 
+//this would be for a button pressing a carrot
   // populateWindow = (market) => {
   //   console.log('this is the market.query', market.query);
   //   this.setState({
@@ -72,9 +70,7 @@ class Map extends Component {
     />
   ))}
   </div>
-) :  (
-<p>FAIL</p>
-)
+) : ( <p> FAIL </p>)
 }
 
 

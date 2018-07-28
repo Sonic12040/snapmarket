@@ -9,23 +9,23 @@ class Main extends Component {
     state = {
     payments: [
     {
-        displayName: "WIC",
+        // displayName: "WIC",
         name: "Wic"
 
     },
     {
-        displayName: "WIC CASH",
+        // displayName: "WIC CASH",
         name: "WicCash"
 
     },
     {
-        displayName: "SNAP",
+        // displayName: "SNAP",
         name: "Snap"
 
     },
     {
         name: "SFMNP",
-        displayName: "SFMNP"
+        // displayName: "SFMNP"
 
     }
     ],
@@ -33,28 +33,11 @@ class Main extends Component {
     query: "",
     }
 
-    toggleClass = (newFilter) => {
-        //if statement to not duplicate
-        if (!this.state.payments.displayName.filter.includes(newFilter)) {
-
-            // console log is returning names correctly
-            const paymentArray = this.state.payments.displayName.filter;
-            paymentArray.push(newFilter);
-            this.setState({ filter: paymentArray });
-        } else {
-            const removeIndex = this.state.payments.displayName.filter.indexOf(newFilter);
-            console.log(removeIndex);
-            this.setState({
-                filter: this.state.payments.displayName.filter.filter(item => item !== newFilter)
-            })
-
-        }
-    };
-
+    //this is commented out because I was testing something....
     // toggleClass = (newFilter) => {
     //     //if statement to not duplicate
     //     if (!this.state.filter.includes(newFilter)) {
-
+    //         console.log("Map 39", this.state.filter);
     //         // console log is returning names correctly
     //         const paymentArray = this.state.filter;
     //         paymentArray.push(newFilter);
@@ -68,6 +51,24 @@ class Main extends Component {
 
     //     }
     // };
+
+    toggleClass = (newFilter) => {
+        //if statement to not duplicate
+        if (!this.state.filter.includes(newFilter)) {
+
+            // console log is returning names correctly
+            const paymentArray = this.state.filter;
+            paymentArray.push(newFilter);
+            this.setState({ filter: paymentArray });
+        } else {
+            const removeIndex = this.state.filter.indexOf(newFilter);
+            console.log(removeIndex);
+            this.setState({
+                filter: this.state.filter.filter(item => item !== newFilter)
+            })
+
+        }
+    };
 
     onSubmit = event => {
         event.preventDefault();
