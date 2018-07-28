@@ -20,22 +20,20 @@ class Map extends Component {
     showResults: false
     }
 
+    //need to write toggle function.
+// this would be for a button pressing a carrot
+  populateWindow = (market) => {
+    console.log('this is the market.query', market.query);
+    this.setState({
+      marketname: market.MarketName,
+      address: market.Address,
+      zipcode: market.ZipCode,
+      benefits: market.Benefits,
+      items: market.Items,
+      benefitsArray: this.convertBenefitsToArray(market)
 
-
-
-//this would be for a button pressing a carrot
-  // populateWindow = (market) => {
-  //   console.log('this is the market.query', market.query);
-  //   this.setState({
-  //     marketname: market.MarketName,
-  //     address: market.Address,
-  //     zipcode: market.ZipCode,
-  //     benefits: market.Benefits,
-  //     items: market.Items,
-  //     benefitsArray: this.convertBenefitsToArray(market)
-
-  //   })
-  // }
+    })
+  }
 
 
 
