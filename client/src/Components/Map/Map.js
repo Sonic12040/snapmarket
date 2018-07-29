@@ -1,3 +1,4 @@
+//Imports
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
 import {connect} from 'react-redux';
@@ -5,84 +6,64 @@ import Marker from './../Marker';
 import CarrotIcon from './carrotMapIcon.png';
 import InfoWindow from './../InfoWindow';
 import { handleMarketClick } from "../../store/actions/searchActions"
-
+//Imports your Google Maps API key from the .env file
 const API_KEY = process.env.REACT_APP_API_KEY;
 
-
+//Start of the component
 class Map extends Component {
-
-
-handleClick() {
-    this.setState({
-      condition: !this.state.condition
-    });
-  }
-
+//State
   state = {
-    markets: [],
-    marketname: "Market Name",
-    address: "Address",
-    zipcode: 60565,
-    benefits: {},
-    benefitsArray: [],
-    items: [],
-    showResults: false
+      markets: [],
+      marketname: "Market Name",
+      address: "Address",
+      zipcode: 60565,
+      benefits: {},
+      benefitsArray: [],
+      items: [],
+      showResults: false
     }
-
-
-
-
+//Default Center and Zoom levels for the map
   static defaultProps = {
-
     center: {
       lat: 38.8283,
       lng: -98.5795
     },
     zoom: 4
   };
-
-  forcePage() {
-
-    this.forceUpdate();
-
-  }
-
+//Determines which InfoWindow to return in the Render
   infoWindowReturn() {
     let displayContent = this.props.targetedMarket;
-
     if(this.props.showResults && displayContent === null) {
       return <div>
-      {this.props.results.map(result => (
-
-        <InfoWindow
-          marketname={result.MarketName}
-          address={result.Address}
-          zipcode={result.ZipCode}
-          benefits={result.Benefits}
-          items={result.Items}
-          benefitsArray={this.props.benefitsArray}
-          showResults={this.props.showResults}
-        />
-      ))}
+        {this.props.results.map(result => (
+          <InfoWindow
+            marketname={result.MarketName}
+            address={result.Address}
+            zipcode={result.ZipCode}
+            benefits={result.Benefits}
+            items={result.Items}
+            benefitsArray={this.props.benefitsArray}
+            showResults={this.props.showResults}
+          />
+        ))}
       </div>
     } else if (this.props.showResults && displayContent !== null) {
       return <div>
-      {displayContent.map(click => (
-        <InfoWindow
-          marketname={click.MarketName}
-          address={click.Address}
-          zipcode={click.ZipCode}
-          benefits={click.Benefits}
-          items={click.Items}
-          benefitsArray={this.props.benefitsArray}
-          showResults={this.props.showResults}
-        />
-      ))
-    }
-
-    </div>
+        {displayContent.map(click => (
+          <InfoWindow
+            marketname={click.MarketName}
+            address={click.Address}
+            zipcode={click.ZipCode}
+            benefits={click.Benefits}
+            items={click.Items}
+            benefitsArray={this.props.benefitsArray}
+            showResults={this.props.showResults}
+          />
+        ))}
+      </div>
     } else {
-      return <InfoWindow
+      return (
+        <InfoWindow
           marketname={"No Market"}
           address={""}
           zipcode={""}
@@ -91,15 +72,13 @@ handleClick() {
           benefitsArray={[""]}
           showResults={this.props.showResults}
         />
+      )
     }
   }
-
+//Renders the content to the page
   render() {
-
     return (
-      // Important! Always set the container height explicitly
       <div style={{ height: '100vh', width: '100%' }}>
-        {/* Info Window Return goes here */}
         {this.infoWindowReturn()}
         <GoogleMapReact
           bootstrapURLKeys={{ key: API_KEY }}
@@ -120,14 +99,9 @@ handleClick() {
       </div>
     );
   }
-
 }
 
-
-
-
 function mapStateToProps(state) {
-  console.log('state.benefitsArray', state.benefitsArray);
   return {
     results: state.results,
     benefitsArray: state.benefitsArray,
@@ -135,14 +109,11 @@ function mapStateToProps(state) {
     targetedMarket: state.targetedMarket
   };
 }
-
-// this imports actions from redux, we use another name just to make it clear
+// This dispatches the Address to Redux on the click of a Map Marker
 const mapDispatchToProps = (dispatch)=> ({
   onHandleMarketClick: (Address) =>
     dispatch(handleMarketClick(Address))
 
 });
 
-
 export default connect(mapStateToProps, mapDispatchToProps)(Map);
-

@@ -1,4 +1,5 @@
+const market = require('./market');
+
 module.exports = {
-    Market: require('./market'),
-    User: require('./user')
+  Market: market,
 };

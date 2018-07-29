@@ -1,5 +1,3 @@
-import { Types } from "mongoose";
-
 const convertBenefitsToArray = (market) => {
     let benefitsArray = [];
     if (market.Wic) {
@@ -34,7 +32,6 @@ const filterMarket = (userButton, filter) => {
 const initialState = {query: "", results: [], benefitsArray: [], targetedMarket: null};
 
 const reducer = (state = initialState, action) => {
-console.log('Initial State', initialState);
 
     switch(action.type) {
         case "HANDLE_SEARCH":
@@ -51,8 +48,6 @@ console.log('Initial State', initialState);
             //find the object in the results array that has the same Address as the payload. if statement to return null?
             const target = state.results.filter(item => {
                 // match item.Address to action.payload
-
-                console.log('Success!');
                 if (item.Address === action.payload) {
                     console.log('ITEM', item);
                     return item;

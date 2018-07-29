@@ -63,3 +63,4 @@ app-env.env
 
 .vs/slnx.sqlite
 .vs/
+.eslintrc.json

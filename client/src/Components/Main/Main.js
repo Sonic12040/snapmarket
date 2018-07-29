@@ -7,55 +7,27 @@ import Zipcode from "../Zipcode";
 class Main extends Component {
 
     state = {
-    payments: [
-    {
-        // displayName: "WIC",
-        name: "Wic"
-
-    },
-    {
-        // displayName: "WIC CASH",
-        name: "WicCash"
-
-    },
-    {
-        // displayName: "SNAP",
-        name: "Snap"
-
-    },
-    {
-        name: "SFMNP",
-        // displayName: "SFMNP"
-
+        payments: [
+        {
+            name: "Wic"
+        },
+        {
+            name: "WicCash"
+        },
+        {
+            name: "Snap"
+        },
+        {
+            name: "SFMNP",
+        }
+        ],
+        filter: [],
+        query: "",
     }
-    ],
-    filter: [],
-    query: "",
-    }
-
-    //this is commented out because I was testing something....
-    // toggleClass = (newFilter) => {
-    //     //if statement to not duplicate
-    //     if (!this.state.filter.includes(newFilter)) {
-    //         console.log("Map 39", this.state.filter);
-    //         // console log is returning names correctly
-    //         const paymentArray = this.state.filter;
-    //         paymentArray.push(newFilter);
-    //         this.setState({ filter: paymentArray });
-    //     } else {
-    //         const removeIndex = this.state.filter.indexOf(newFilter);
-    //         console.log(removeIndex);
-    //         this.setState({
-    //             filter: this.state.filter.filter(item => item !== newFilter)
-    //         })
-
-    //     }
-    // };
 
     toggleClass = (newFilter) => {
         //if statement to not duplicate
         if (!this.state.filter.includes(newFilter)) {
-
             // console log is returning names correctly
             const paymentArray = this.state.filter;
             paymentArray.push(newFilter);
@@ -76,7 +48,6 @@ class Main extends Component {
             query: this.state.query,
             filter: this.state.filter,
         }
-        console.log(data);
         this.props.onHandleSearch(data);
         this.setState({ query: ""});
     }
@@ -84,39 +55,29 @@ class Main extends Component {
     onSearchChange = (event) => {
         this.setState({
             query: event.target.value
-
         })
     }
 
 
     render() {
-
-        if(this.state.value === 'true') {
-            console.log('this.state.value', this.state.value)
-        }
-        console.log("this.state.filter", this.state.filter);
         return(
-
-        <div className="height70vh overflow-h bg-FBFEFF l-h1">
-            <div className="t-a-c fs-didact">
-            <div className="mb-2em fade-in mt-1em">enter your preferences below</div>
-            <div className="mb-2em fade-in2">or scroll down to see the map</div>
-            <div className="d-f center">{this.state.payments.map(payment => (
-            <Button name={payment.name} onClick={this.toggleClass} />
-        ))}</div>
-            <Zipcode onSearchChange={this.onSearchChange} onSubmit={this.onSubmit} value={this.state.query} />
-        </div>
-    </div>
-
-        )}
-
-
+            <div className="height70vh overflow-h bg-FBFEFF l-h1">
+                <div className="t-a-c fs-didact">
+                    <div className="mb-2em fade-in mt-1em">enter your preferences below</div>
+                    <div className="mb-2em fade-in2">or scroll down to see the map</div>
+                    <div className="d-f center">{this.state.payments.map(payment => (
+                        <Button name={payment.name} onClick={this.toggleClass} />
+                    ))}
+                    </div>
+                    <Zipcode onSearchChange={this.onSearchChange} onSubmit={this.onSubmit} value={this.state.query} />
+                </div>
+            </div>
+        )
+    }
 }
 
 const mapDispatchToProps = dispatch => ({
-
     onHandleSearch: (query) => dispatch(handleSearch(query))
-
 })
 
 
