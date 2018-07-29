@@ -33,8 +33,6 @@ class Main extends Component {
             paymentArray.push(newFilter);
             this.setState({ filter: paymentArray });
         } else {
-            const removeIndex = this.state.filter.indexOf(newFilter);
-            console.log(removeIndex);
             this.setState({
                 filter: this.state.filter.filter(item => item !== newFilter)
             })
