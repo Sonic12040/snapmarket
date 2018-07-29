@@ -1,14 +1,21 @@
-import React, { Component } from "react";
+import React from "react";
+import carrotLogo from './carrotLogo.png';
 
 
 const Header = () => 
-    <header className="header">
-        <div className="row">
-            <div>This is our navigation bar.
-                <div className="fl-left">This will housed our login</div>
+
+    <div className=" t-a-c bg-E5DCD1 mb-2em pad-2em">
+       
+            <div className="fs-fredericka color-2D2D2D fs-5em l-h1 d-s">
+            
+            <img className="logo-carrot" src={carrotLogo} alt="CarrotSnap" />
+            CarrotSnap
+            
+          
             </div>
-        </div>
-    </header>
+           
+                <p className="fs-didact color-2D2D2D l-h1 fs-1-25rem">find farmer's markets with benefits near you</p>
+    </div>
 
 
 

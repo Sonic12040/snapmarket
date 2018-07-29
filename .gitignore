@@ -61,4 +61,6 @@ app-env.env
 # next.js build output
 .next
 
-\.eslintrc\.json
+.vs/slnx.sqlite
+.vs/
+.eslintrc.json
