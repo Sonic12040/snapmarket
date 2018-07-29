@@ -1,3 +1,4 @@
+// Function to convert Benefits object to Array
 const convertBenefitsToArray = (market) => {
     let benefitsArray = [];
     if (market.Wic) {
@@ -12,12 +13,9 @@ const convertBenefitsToArray = (market) => {
     if (market.SFMNP) {
         benefitsArray.push("SFMNP");
     };
-
     return benefitsArray;
   }
-
-
-
+// Filter to check for matching markets
 const filterMarket = (userButton, filter) => {
     for (const key in userButton) {
         if (userButton[key] === true) {
@@ -28,11 +26,10 @@ const filterMarket = (userButton, filter) => {
     }
     return false;
 }
-
+// Initial State
 const initialState = {query: "", results: [], benefitsArray: [], targetedMarket: null};
 
 const reducer = (state = initialState, action) => {
-
     switch(action.type) {
         case "HANDLE_SEARCH":
             return {
@@ -44,10 +41,7 @@ const reducer = (state = initialState, action) => {
 
             };
         case "TARGET_MARKET":
-            // work thru results array to find whatever the market is with the matching address
-            //find the object in the results array that has the same Address as the payload. if statement to return null?
             const target = state.results.filter(item => {
-                // match item.Address to action.payload
                 if (item.Address === action.payload) {
                     console.log('ITEM', item);
                     return item;
@@ -59,12 +53,11 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 targetedMarket: target
 
-            }
-
+            };
         default:
             return state;
     }
 
 };
-
+// Exports
 export default reducer;
