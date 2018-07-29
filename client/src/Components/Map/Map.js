@@ -6,23 +6,12 @@ import Marker from './../Marker';
 import CarrotIcon from './carrotMapIcon.png';
 import InfoWindow from './../InfoWindow';
 import { handleMarketClick } from "../../store/actions/searchActions"
-//Imports your Google Maps API key from the .env file
+// Imports your Google Maps API key from the .env file
 const API_KEY = process.env.REACT_APP_API_KEY;
 
-//Start of the component
+// Start of the component
 class Map extends Component {
-//State
-  state = {
-      markets: [],
-      marketname: "Market Name",
-      address: "Address",
-      zipcode: 60565,
-      benefits: {},
-      benefitsArray: [],
-      items: [],
-      showResults: false
-    }
-//Default Center and Zoom levels for the map
+// Default Center and Zoom levels for the map
   static defaultProps = {
     center: {
       lat: 38.8283,
@@ -30,7 +19,7 @@ class Map extends Component {
     },
     zoom: 4
   };
-//Determines which InfoWindow to return in the Render
+// Determines which InfoWindow to return in the Render
   infoWindowReturn() {
     let displayContent = this.props.targetedMarket;
     if(this.props.showResults && displayContent === null) {
@@ -75,7 +64,7 @@ class Map extends Component {
       )
     }
   }
-//Renders the content to the page
+// Renders the content to the page
   render() {
     return (
       <div style={{ height: '100vh', width: '100%' }}>
@@ -100,7 +89,7 @@ class Map extends Component {
     );
   }
 }
-
+// Redux State management
 function mapStateToProps(state) {
   return {
     results: state.results,
@@ -113,7 +102,6 @@ function mapStateToProps(state) {
 const mapDispatchToProps = (dispatch)=> ({
   onHandleMarketClick: (Address) =>
     dispatch(handleMarketClick(Address))
-
 });
-
+// Exports
 export default connect(mapStateToProps, mapDispatchToProps)(Map);
