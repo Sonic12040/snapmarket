@@ -16,6 +16,15 @@ app.use(bodyParser.json());
 // Define Routes
 app.use(routes);
 
+if (process.env.NODE_ENV === "production") {
+	// SET STATIC SERVER
+	app.use(express.static("client/build"));
+	// SET ROUTES TO USE INDEX.HTML FILE
+	// app.get("*", (req, res) => {
+	// 	res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+	// });
+}
+
 // Connect to Mongoose
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/snapmarket');
 
