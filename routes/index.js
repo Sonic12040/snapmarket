@@ -8,7 +8,7 @@ router.use('/api', apiRoutes);
 router.get('/error', (req, res) => {
   res.sendFile(path.join(__dirname, '../error.html'));
 });
-router.use((req, res) => {
+router.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/build/index.html'));
 });
 
