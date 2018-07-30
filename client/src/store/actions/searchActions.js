@@ -6,7 +6,7 @@ export const handleSearch = (query) => dispatch => {
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify(query), // body data type must match "Content-Type" header
+        body: JSON.stringify(query),
     })
     .then(function(response) {
         return response.json();

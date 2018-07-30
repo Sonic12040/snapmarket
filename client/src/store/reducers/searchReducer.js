@@ -28,7 +28,7 @@ const filterMarket = (userButton, filter) => {
 }
 // Initial State
 const initialState = {query: "", results: [], benefitsArray: [], targetedMarket: null};
-
+// Reducer and its switch cases
 const reducer = (state = initialState, action) => {
     switch(action.type) {
         case "HANDLE_SEARCH":

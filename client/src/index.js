@@ -12,15 +12,11 @@ import searchReducer from "./store/reducers/searchReducer";
 const enhancer = applyMiddleware(thunk);
 
 const store = createStore(searchReducer, compose(
-
     enhancer,
-
     window.devToolsExtension ? window.devToolsExtension() : f => f
-
 ));
 
 const wholeStore = () => {
-    console.log("this is testing to see if the arrays match", store.getState())
     store.getState()
 }
 
