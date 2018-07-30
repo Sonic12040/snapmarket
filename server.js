@@ -13,6 +13,11 @@ require('dotenv').config();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+// Serve Static Assets
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static('client/build'));
+};
+
 // Define Routes
 app.use(routes);
 
