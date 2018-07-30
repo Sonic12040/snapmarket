@@ -5,8 +5,12 @@ const apiRoutes = require('./api');
 router.use('/api', apiRoutes);
 
 // HTML Routes
+router.get('/error', (req, res) => {
+  res.sendFile(path.join(__dirname, '../error.html'));
+});
 router.use((req, res) => {
   res.sendFile(path.join(__dirname, '../client/build/index.html'));
 });
+
 // Export
 module.exports = router;
