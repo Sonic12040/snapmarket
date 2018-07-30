@@ -8,7 +8,7 @@ const Header = () =>
             <img className="logo-carrot" src={carrotLogo} alt="CarrotSnap" />
             CarrotSnap
         </div>
-        <p className="fs-didact color-2D2D2D l-h1 fs-1-25rem">find farmer's markets with benefits near you</p>
+        <p className="fs-didact color-2D2D2D l-h1 fs-1-25rem">find farmer&apos;s markets with benefits near you</p>
     </div>
 
 
