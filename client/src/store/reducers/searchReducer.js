@@ -19,7 +19,10 @@ const convertBenefitsToArray = (market) => {
 const filterMarket = (userButton, filter) => {
     for (const key in userButton) {
         if (userButton[key] === true) {
-            if (filter.includes(key)) {
+            console.log('filter', filter);
+            console.log('userButton[key]', userButton[key]);
+            if (filter.includes(key) || filter === []) {
+                console.log('returning true');
                 return true;
             }
         }
