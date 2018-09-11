@@ -17,12 +17,7 @@ const marketSeed = [
       Longitude: '-87.635971',
     },
     ZipCode: '36542',
-    Benefits: {
-      Wic: false,
-      WicCash: false,
-      Snap: false,
-      SFMNP: true,
-    },
+    Benefits: ['SFMNP'],
     Items: ['Baked Goods', 'Eggs', 'Vegetables', 'Honey', 'Jams', 'Soap', 'Fruits', 'Grains'],
   },
   {
@@ -33,12 +28,7 @@ const marketSeed = [
       Longitude: '-112.5421815',
     },
     ZipCode: '85326',
-    Benefits: {
-      Wic: false,
-      WicCash: false,
-      Snap: false,
-      SFMNP: false,
-    },
+    Benefits: [],
     Items: ['Vegetables', 'Jams', 'Fruits'],
   },
   {
@@ -49,12 +39,7 @@ const marketSeed = [
       Longitude: '-92.269656',
     },
     ZipCode: '72201',
-    Benefits: {
-      Wic: false,
-      WicCash: false,
-      Snap: false,
-      SFMNP: false,
-    },
+    Benefits: [],
     Items: ['Organic', 'Baked Goods', 'Cheese', 'Crafts', 'Flowers', 'Eggs', 'Herbs', 'Vegetables', 'Honey', 'Jams', 'Meat', 'Nuts', 'Plants', 'Poultry', 'Prepared', 'Soap', 'Trees', 'Coffee', 'Beans', 'Fruits', 'Juices', 'Mushrooms', 'Pet Food', 'Wild Harvested'],
   },
   {
@@ -65,12 +50,7 @@ const marketSeed = [
       Longitude: '-121.847277',
     },
     ZipCode: '95132',
-    Benefits: {
-      Wic: true,
-      WicCash: false,
-      Snap: true,
-      SFMNP: false,
-    },
+    Benefits: ['WIC', 'SNAP'],
     Items: ['Organic', 'Baked Goods', 'Flowers', 'Seafood', 'Vegetables', 'Honey', 'Plants', 'Poultry', 'Prepared', 'Trees', 'Fruits', 'Mushrooms'],
   },
   {
@@ -81,12 +61,7 @@ const marketSeed = [
       Longitude: '-105.025709',
     },
     ZipCode: '80120',
-    Benefits: {
-      Wic: false,
-      WicCash: false,
-      Snap: true,
-      SFMNP: false,
-    },
+    Benefits: ['SNAP'],
     Items: ['Organic', 'Baked Goods', 'Cheese', 'Crafts', 'Eggs', 'Seafood', 'Herbs', 'Vegetables', 'Honey', 'Jams', 'Maple', 'Meat', 'Nuts', 'Plants', 'Poultry', 'Prepared', 'Soap', 'Wine', 'Coffee', 'Fruits', 'Grains', 'Juices', 'Mushrooms', 'Wild Harvested'],
   },
   {
@@ -97,12 +72,7 @@ const marketSeed = [
       Longitude: '-72.991492',
     },
     ZipCode: '6524',
-    Benefits: {
-      Wic: true,
-      WicCash: false,
-      Snap: false,
-      SFMNP: true,
-    },
+    Benefits: ['WIC', 'SFMNP'],
     Items: ['Organic', 'Baked Goods', 'Cheese', 'Crafts', 'Flowers', 'Eggs', 'Vegetables', 'Honey', 'Jams', 'Maple', 'Plants', 'Soap', 'Coffee', 'Fruits', 'Juices'],
   },
   {
@@ -113,12 +83,7 @@ const marketSeed = [
       Longitude: '-75.310059',
     },
     ZipCode: '19968',
-    Benefits: {
-      Wic: true,
-      WicCash: false,
-      Snap: false,
-      SFMNP: false,
-    },
+    Benefits: ['WIC'],
     Items: ['Baked Goods', 'Cheese', 'Crafts', 'Flowers', 'Eggs', 'Seafood', 'Herbs', 'Vegetables', 'Honey', 'Jams', 'Meat', 'Plants', 'Poultry', 'Prepared', 'Soap', 'Wine', 'Fruits', 'Mushrooms', 'Pet Food'],
   },
   {
@@ -129,12 +94,7 @@ const marketSeed = [
       Longitude: '-76.978077',
     },
     ZipCode: '20002',
-    Benefits: {
-      Wic: true,
-      WicCash: true,
-      Snap: true,
-      SFMNP: true,
-    },
+    Benefits: ['WIC', 'WIC CASH', 'SNAP', 'SFMNP'],
     Items: ['Organic', 'Baked Goods', 'Cheese', 'Flowers', 'Eggs', 'Seafood', 'Herbs', 'Vegetables', 'Honey', 'Meat', 'Poultry', 'Beans', 'Fruits', 'Mushrooms'],
   },
 ];
