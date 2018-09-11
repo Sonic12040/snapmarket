@@ -25,22 +25,8 @@ const marketSchema = new Schema({
         required: true
     },
     Benefits: {
-        Wic: {
-            type: Boolean,
-            required: true
-        },
-        WicCash: {
-            type: Boolean,
-            required: true
-        },
-        Snap: {
-            type: Boolean,
-            required: true
-        },
-        SFMNP: {
-            type: Boolean,
-            required: true
-        }
+        type: [String],
+        required: true
     },
     Items: {
         type: [String],
