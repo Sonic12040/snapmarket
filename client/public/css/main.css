@@ -3,23 +3,9 @@
         max-width: 3000px;
         margin-left: auto;
         margin-right: auto;
- 
-
 }
 
-a:link {
-    text-decoration: none; 
-}
-
-a:visited {
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: none;
-}
-
-a:active {
+a {
     text-decoration: none;
 }
 
@@ -51,8 +37,6 @@ a:active {
     background-size: cover;
 }
 /* button stuff */
-
-
 .button-1{
     width:140px;
     height:50px;
@@ -64,8 +48,7 @@ a:active {
     box-sizing:border-box;
     overflow:hidden;
     margin:0 0 40px 50px;
-
-  }
+}
 
   .buttonClicked {
     width:140px;
@@ -78,7 +61,6 @@ a:active {
     box-sizing:border-box;
     overflow:hidden;
     margin:0 0 40px 50px;
-
   }
 
 
@@ -106,7 +88,7 @@ a:active {
 
   /* backgrounds */
 .bg-2D2D2D {
-    background-color: #2D2D2D; 
+    background-color: #2D2D2D;
 }
 .bg-FBFEFF {
     background-color: #FBFEFF;
@@ -137,7 +119,7 @@ a:active {
 
 /* colors */
 .color-2D2D2D {
-    color: #2D2D2D; 
+    color: #2D2D2D;
 }
 .color-FBFEFF {
     color: #FBFEFF;
@@ -152,7 +134,7 @@ a:active {
    color: #FFBF77;
 }
 
-    
+
 
 /* flex box */
 .center {
@@ -179,7 +161,7 @@ a:active {
     direction: ltr;
 }
 .d-n {
-    display: none; 
+    display: none;
 }
 
 
@@ -192,7 +174,7 @@ a:active {
     transition: height 1s;
   }
 
-/* F */ 
+/* F */
 
 .fade-in {
 
@@ -201,7 +183,7 @@ a:active {
 	animation-iteration-count: 1;
 	animation-timing-function: ease-in;
     animation-duration: 3s;
-    
+
 }
 
 @keyframes fadeInOpacity {
@@ -220,7 +202,7 @@ a:active {
 	animation-iteration-count: 1;
 	animation-timing-function: ease-in;
     animation-duration: 4s;
-    
+
 }
 
 @keyframes fadeInOpacity2 {
@@ -247,7 +229,7 @@ a:active {
 /* font sizes */
 
 .fs-6rem {
-    font-size: 6.25rem; 
+    font-size: 6.25rem;
 }
 .fs-5em {
     font-size: 5em;
@@ -267,7 +249,7 @@ a:active {
 /* form */
 
 .form-container {
-    
+
     max-width: 58%;
     display: block;
     margin: 0 auto;
@@ -278,7 +260,7 @@ input#form-bar {
     margin: 0 auto;
     width: 100%;
     height: 65px;
-    padding: 0 10px; 
+    padding: 0 10px;
     font-size: 1.5rem;
     background: transparent;
     border: 0;
@@ -291,22 +273,22 @@ input#form-bar:focus {
       color: #8CB8D2;
 }
 input#form-bar:-webkit-input-placeholder{
-        transition: opacity 0.45s ease; 
+        transition: opacity 0.45s ease;
           opacity: 0;
        }
 
 input#form-bar:-moz-placeholder {
-        transition: opacity 0.45s ease; 
+        transition: opacity 0.45s ease;
           opacity: 0;
        }
 
 input#form-bar:-ms-placeholder {
-       transition: opacity 0.45s ease; 
+       transition: opacity 0.45s ease;
          opacity: 0;
-       }    
+       }
 
 
-  
+
 
 /* flex box */
 
@@ -338,7 +320,7 @@ input#form-bar:-ms-placeholder {
     position: relative;
     z-index: 2;
     height: 100px;
-    color: #2D2D2D; 
+    color: #2D2D2D;
     margin: auto;
     padding-top: 2vh;
     text-align: center;
@@ -348,7 +330,7 @@ input#form-bar:-ms-placeholder {
 /* H */
 
 .height100 {
-    height: 100%; 
+    height: 100%;
 }
 .height70vh {
     height: 70vh;
@@ -357,16 +339,16 @@ input#form-bar:-ms-placeholder {
     height: 80%;
 }
 .height10 {
-    height: 10%; 
+    height: 10%;
 }
 .height30vh {
-    height: 30vh; 
+    height: 30vh;
 }
 .height25vh {
     height: 25vh;
 }
 .height600px {
-    height: 600px; 
+    height: 600px;
 }
 .height200px {
     height: 200px;
@@ -381,8 +363,8 @@ input#form-bar:-ms-placeholder {
     height:2em;
 }
 .images {
-    height: 230px; 
-    width: 153px; 
+    height: 230px;
+    width: 153px;
 }
 .image-auto {
     max-width: 100%;
@@ -445,15 +427,15 @@ input[type=password] {
     margin-top: 30vh;
 }
 .ml-75 {
-    margin-left: 75%; 
+    margin-left: 75%;
 }
 
 .ml-1em {
-    margin-left: 1em; 
+    margin-left: 1em;
 }
 
 .ml-01em {
-    margin-left: .1em; 
+    margin-left: .1em;
 }
 
 .ml-3em {
@@ -475,7 +457,7 @@ input[type=password] {
     margin-top: .5em;
   }
   .mt-1em {
-      margin-top: 1em; 
+      margin-top: 1em;
   }
 
   .mb-3em {
@@ -522,7 +504,7 @@ input[type=password] {
     padding: 0.3em;
 }
 .pad-2em {
-    padding: 2em; 
+    padding: 2em;
 }
 
 .pad-15px {
@@ -583,8 +565,8 @@ input[type=password] {
     top: -80px;
     right: -20px;
   }
-  
-  
+
+
 
 /* flexbox */
 .s-b {
@@ -698,48 +680,10 @@ input[type=password] {
 #marker {
     z-index: 999
 }
-  
+
 @-webkit-keyframes bounce {
     0%       { bottom:1px; }
     25%, 75% { bottom:3px; }
     50%      { bottom:5px; }
     100%     {bottom:0;}
-  }
-
-/* media queries */
-
-
-/* Desktop */
-@media screen 
-and (min-width: 980px)
- {
-
-
-  }
-
-  /* Tablet */
-@media screen 
-and (min-width: 500px)
-and (max-width: 979px) {
-
-
-
-
-
 }
-
-
-/* iPhone */
-@media screen 
-and (min-width: 0px) 
-and (max-width: 499px){
-
-   
-
-    
-
-
-
-    
-}
-
