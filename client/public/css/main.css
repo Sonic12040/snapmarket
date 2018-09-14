@@ -1,14 +1,11 @@
-
 .container {
         max-width: 3000px;
         margin-left: auto;
         margin-right: auto;
 }
-
 a {
     text-decoration: none;
 }
-
 .row {
       max-width: 1170px;
       width: 100%;
@@ -17,7 +14,6 @@ a {
       margin-top: 0;
       margin-bottom: 0;
 }
-
 .zipcodeSearch {
     position: relative;
     width: 100%;
@@ -25,18 +21,12 @@ a {
     left: 0;
     z-index: 600;
 }
-
-
-/* B */
-
-/* border */
 .border-box {
     box-sizing: border-box;
 }
 .b-cover {
     background-size: cover;
 }
-/* button stuff */
 .button-1{
     width:140px;
     height:50px;
@@ -49,8 +39,7 @@ a {
     overflow:hidden;
     margin:0 0 40px 50px;
 }
-
-  .buttonClicked {
+.buttonClicked {
     width:140px;
     height:50px;
     border:2px solid #2D2D2D;
@@ -61,17 +50,15 @@ a {
     box-sizing:border-box;
     overflow:hidden;
     margin:0 0 40px 50px;
-  }
-
-
-  .button-1 a{
+}
+.button-1 a{
     color:#2D2D2D;
     line-height:50px;
     transition:all .5s ease;
     z-index:2;
     position:relative;
-  }
-  .left-push {
+}
+.left-push {
     width:140px;
     height:50px;
     left:-140px;
@@ -79,14 +66,10 @@ a {
     position:absolute;
     transition:all .5s ease;
     z-index:1;
-  }
-  .button-1:hover .left-push{
+}
+.button-1:hover .left-push{
     left:0;
-  }
-
-
-
-  /* backgrounds */
+}
 .bg-2D2D2D {
     background-color: #2D2D2D;
 }
@@ -96,28 +79,18 @@ a {
 .bg-E5DCD1 {
     background-color: #E5DCD1;
 }
-
 .bg-8CB8D2 {
     background-color: #8CB8D2;
 }
 .bg-FFBF77 {
     background-color: #FFBF77;
 }
-
-
-
-
 .b-s {
     border: solid;
 }
 .b-w {
     border-width: thin;
 }
-
-
-/* C */
-
-/* colors */
 .color-2D2D2D {
     color: #2D2D2D;
 }
@@ -133,24 +106,15 @@ a {
 .color-FFBF77 {
    color: #FFBF77;
 }
-
-
-
-/* flex box */
 .center {
     justify-content: center;
 }
 .content {
     min-height: calc(100vh - 70px);
 }
-
-/* D */
-
 .d-s {
     filter: drop-shadow(0 0 0.75rem #FBFEFF);
 }
-
-/* flexbox */
 .d-f {
     display: flex;
 }
@@ -163,29 +127,18 @@ a {
 .d-n {
     display: none;
 }
-
-
-
-/* E */
-
 .expand {
     height: 0px;
     overflow: hidden;
     transition: height 1s;
-  }
-
-/* F */
-
+}
 .fade-in {
-
 	opacity: 1;
 	animation-name: fadeInOpacity;
 	animation-iteration-count: 1;
 	animation-timing-function: ease-in;
     animation-duration: 3s;
-
 }
-
 @keyframes fadeInOpacity {
 	0% {
 		opacity: 0;
@@ -194,17 +147,13 @@ a {
 		opacity: 1;
 	}
 }
-
 .fade-in2 {
-
 	opacity: 1;
 	animation-name: fadeInOpacity2;
 	animation-iteration-count: 1;
 	animation-timing-function: ease-in;
     animation-duration: 4s;
-
 }
-
 @keyframes fadeInOpacity2 {
 	0% {
 		opacity: 0;
@@ -213,21 +162,12 @@ a {
 		opacity: 1;
 	}
 }
-
-/* fonts */
-
-/* For title */
 .fs-fredericka {
     font-family: 'Fredericka the Great', cursive;
 }
-
-/* for body */
 .fs-didact {
     font-family: 'Didact Gothic', sans-serif;
 }
-
-/* font sizes */
-
 .fs-6rem {
     font-size: 6.25rem;
 }
@@ -246,16 +186,12 @@ a {
 .f-bold {
     font-weight: bold;
 }
-/* form */
-
 .form-container {
-
     max-width: 58%;
     display: block;
     margin: 0 auto;
     border-bottom: 1px solid #D0CFCE;
-  }
-
+}
 input#form-bar {
     margin: 0 auto;
     width: 100%;
@@ -267,35 +203,25 @@ input#form-bar {
     outline: none;
     font-family:inherit;
 }
-
 input#form-bar:focus {
       transition: 0.35s ease;
       color: #8CB8D2;
 }
 input#form-bar:-webkit-input-placeholder{
-        transition: opacity 0.45s ease;
-          opacity: 0;
-       }
-
+    transition: opacity 0.45s ease;
+    opacity: 0;
+}
 input#form-bar:-moz-placeholder {
-        transition: opacity 0.45s ease;
-          opacity: 0;
-       }
-
+    transition: opacity 0.45s ease;
+    opacity: 0;
+}
 input#form-bar:-ms-placeholder {
-       transition: opacity 0.45s ease;
-         opacity: 0;
-       }
-
-
-
-
-/* flex box */
-
+    transition: opacity 0.45s ease;
+    opacity: 0;
+}
 .f-e {
     justify-content: flex-end;
 }
-
 .f-s {
     justify-content: flex-start;
 }
@@ -314,8 +240,6 @@ input#form-bar:-ms-placeholder {
 .flex-dr {
     flex-direction: row;
 }
-
-/* footer */
 .foot {
     position: relative;
     z-index: 2;
@@ -326,9 +250,6 @@ input#form-bar:-ms-placeholder {
     text-align: center;
     background-color: #E5DCD1;
 }
-
-/* H */
-
 .height100 {
     height: 100%;
 }
@@ -353,11 +274,6 @@ input#form-bar:-ms-placeholder {
 .height200px {
     height: 200px;
 }
-
-
-/* I */
-
-/* icons */
 .icons {
     width:2em;
     height:2em;
@@ -370,50 +286,33 @@ input#form-bar:-ms-placeholder {
     max-width: 100%;
     height: auto;
 }
-
-/* for new post */
 input[type=text-newpost] {
     width: 80%;
     height: 2em;
     font-family: 'Poppins', sans-serif;
-  }
-
-/* for login and signup */
-
+}
 input[type=text-modal] {
     width: 50%;
     height: 3em;
     font-family: 'Poppins', sans-serif;
     margin: 0 0 15px 0;
-  }
-
+}
 input[type=password] {
     width: 50%;
     height: 3em;
     font-family: 'Poppins', sans-serif;
     margin: 0 0 15px 0;
 }
-
-/* J */
-
 .jc-center {
     justify-content: center;
 }
-
-/* L */
-
 .l-h1 {
     line-height: 0.5;
 }
-
 .logo-carrot {
     width: 80px;
     height: auto;
 }
-
-/* M */
-
-/* margin */
 .ma {
     margin: auto;
 }
@@ -429,84 +328,54 @@ input[type=password] {
 .ml-75 {
     margin-left: 75%;
 }
-
 .ml-1em {
     margin-left: 1em;
 }
-
 .ml-01em {
     margin-left: .1em;
 }
-
 .ml-3em {
     margin-left: 3em;
-  }
-  .mr-3em {
+}
+.mr-3em {
     margin-right: 3em;
-  }
-
-  .mr-01em {
+}
+.mr-01em {
     margin-right: .1em;
-  }
-
-  .mt-3em {
+}
+.mt-3em {
     margin-top: 3em;
-  }
-
-  .mt-05em {
+}
+.mt-05em {
     margin-top: .5em;
-  }
-  .mt-1em {
-      margin-top: 1em;
-  }
-
-  .mb-3em {
+}
+.mt-1em {
+    margin-top: 1em;
+}
+.mb-3em {
     margin-bottom: 3em;
-  }
-  .mb-2em {
-      margin-bottom: 2em;
-  }
-
-  .mb-1em {
+}
+.mb-2em {
+    margin-bottom: 2em;
+}
+.mb-1em {
     margin-bottom: 1em;
-  }
-
-  .mb-3em {
+}
+.mb-3em {
     margin-bottom: 3em;
-  }
-  .mb-2em {
-      margin-bottom: 2em;
-  }
-
-  .mb-1em {
+}
+.mb-2em {
+    margin-bottom: 2em;
+}
+.mb-1em {
     margin-bottom: 1em;
-  }
-
-
-
-
-
-
-
-
-/* N */
-
-
-
-
-
-
-/* P */
-
-/* padding */
-
+}
 .pad-03em {
     padding: 0.3em;
 }
 .pad-2em {
     padding: 2em;
 }
-
 .pad-15px {
     padding: 0px 15px 0 0;
 }
@@ -528,8 +397,6 @@ input[type=password] {
 .pr-3em {
     padding-right: 3em;
 }
-
-/* position */
 .pos-a {
     position: absolute;
 }
@@ -539,9 +406,6 @@ input[type=password] {
 .pos-f {
     position: fixed;
 }
-
-/* O */
-
 .op:hover{
     opacity: 0.5;
 }
@@ -554,9 +418,6 @@ input[type=password] {
 .overflow-h {
     overflow-x: hidden;
 }
-
-/* S */
-
 .search-icon{
     position: relative;
     float: right;
@@ -564,40 +425,22 @@ input[type=password] {
     height: 100px;
     top: -80px;
     right: -20px;
-  }
-
-
-
-/* flexbox */
+}
 .s-b {
     justify-content: space-between;
 }
-
 .s-e {
     justify-content: space-evenly;
 }
-
-
-
-/* T */
-
 .t-d {
     text-decoration: none;
 }
-
 .t-a-r{
     text-align: right;
 }
 .t-a-c {
     text-align: center;
 }
-
-
-/* W */
-
-
-/* width */
-
 .w-100per {
     width: 100%;
 }
@@ -610,18 +453,9 @@ input[type=password] {
 .width-50 {
     width: 50%;
 }
-
-/* wrapper */
-
 .wrapper {
-    /* height: 100vh;
-    width: 100vw;
-    position: relative; */
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease;
 }
-
-/* Z */
-
 .z-index-1 {
     z-index: 1;
 }
@@ -631,24 +465,17 @@ input[type=password] {
 .z-index-3 {
     z-index: 3;
 }
-
-/* Animation */
-
 .bounce-1sec {
     position: relative;
     -webkit-animation:bounce 1s infinite;
-  }
-
+}
 .bounce-2sec {
     position: relative;
     -webkit-animation:bounce 2s infinite;
-  }
-
-/* HEY MEL, YOU WANT TO CHANGE THIS! */
+}
 #infoWindow {
     position: absolute;
     z-index: 1;
-    /* height: 90%; */
     width: 25%;
     min-width: 200px;
     padding:  0 20px 0 18px;
@@ -658,29 +485,20 @@ input[type=password] {
     margin: 20px 0 0 20px;
     outline: 1px solid #E5DCD1;
     outline-offset: -8px;
-
 }
 .infoAddress {
     margin-top: -20px;
     margin-bottom: 40px;
-
 }
-
 .infoMarketname {
     clear: both;
-
 }
-
 .infoZipcode {
-
     float: left;
-
 }
-
 #marker {
     z-index: 999
 }
-
 @-webkit-keyframes bounce {
     0%       { bottom:1px; }
     25%, 75% { bottom:3px; }
