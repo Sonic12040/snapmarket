@@ -4,13 +4,13 @@
   "private": true,
   "proxy": "http://localhost:3001",
   "dependencies": {
-    "google-map-react": "^1.0.5",
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1",
-    "react-redux": "^5.0.7",
+    "google-map-react": "^1.0.9",
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0",
+    "react-redux": "^5.1.0",
     "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.4",
-    "redux": "^4.0.0",
+    "redux": "^4.0.1",
     "redux-thunk": "^2.3.0"
   },
   "scripts": {
@@ -20,7 +20,7 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "eslint": "^5.2.0",
-    "eslint-plugin-react": "^7.10.0"
+    "eslint": "^5.8.0",
+    "eslint-plugin-react": "^7.11.1"
   }
 }
