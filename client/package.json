@@ -4,12 +4,12 @@
   "private": true,
   "proxy": "http://localhost:3001",
   "dependencies": {
-    "google-map-react": "^1.0.9",
+    "google-map-react": "^1.1.0",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
     "react-redux": "^5.1.0",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "1.1.5",
+    "react-scripts": "2.1.0",
     "redux": "^4.0.1",
     "redux-thunk": "^2.3.0"
   },
@@ -22,5 +22,11 @@
   "devDependencies": {
     "eslint": "^5.8.0",
     "eslint-plugin-react": "^7.11.1"
-  }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
