@@ -3,21 +3,23 @@ import searchIcon from './search-icon.png';
 
 
 
-const Zipcode = (props) =>
+function Zipcode ({onSubmit, value, onSearchChange}) { 
+return (
 <div className="formName">
     <div className="zipcodeSearch">
         <form className="form-container"
-            onSubmit={props.onSubmit}>
+            onSubmit={onSubmit}>
             <input
                 id="form-bar"
                 placeholder="Enter your Zipcode"
-                value={props.value}
-                onChange={props.onSearchChange}
+                value={value}
+                onChange={onSearchChange}
             />
             <a href="/" type="submit"><img  alt="search" className="search-icon" src={searchIcon} /></a>
          </form>
     </div>
 </div>
-
+)
+}
 
 export default Zipcode;

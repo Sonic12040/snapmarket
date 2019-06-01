@@ -64,3 +64,4 @@ app-env.env
 .vs/slnx.sqlite
 .vs/
 .eslintrc.json
+package-lock.json

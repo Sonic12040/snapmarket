@@ -1,0 +1,7 @@
+organization=sonic12040-github
+projectKey=Sonic12040_snapmarket
+serverUrl=https://sonarcloud.io
+serverVersion=7.8.0.25269
+dashboardUrl=https://sonarcloud.io/dashboard?id=Sonic12040_snapmarket
+ceTaskId=AWsT67TrOR_DEgo-qTOM
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AWsT67TrOR_DEgo-qTOM

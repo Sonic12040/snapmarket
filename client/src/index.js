@@ -5,7 +5,6 @@ import { createStore, applyMiddleware, compose} from "redux";
 import thunk from "redux-thunk";
 import './index.css';
 import App from './App';
-import registerServiceWorker from './registerServiceWorker';
 import searchReducer from "./store/reducers/searchReducer";
 
 
