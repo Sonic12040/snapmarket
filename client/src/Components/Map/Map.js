@@ -9,7 +9,6 @@ import { handleMarketClick } from "../../store/actions/searchActions"
 // Imports your Google Maps API key from the .env file
 const API_KEY = process.env.REACT_APP_API_KEY;
 
-// Start of the component
 class Map extends Component {
 // Default Center and Zoom levels for the map
   static defaultProps = {

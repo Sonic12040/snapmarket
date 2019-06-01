@@ -5,12 +5,12 @@ import { createStore, applyMiddleware, compose} from "redux";
 import thunk from "redux-thunk";
 import './index.css';
 import App from './App';
-import searchReducer from "./store/reducers/searchReducer";
+import reducer from "./store/reducers/reducer";
 
 
 const enhancer = applyMiddleware(thunk);
 
-const store = createStore(searchReducer, compose(
+const store = createStore(reducer, compose(
     enhancer,
     window.devToolsExtension ? window.devToolsExtension() : f => f
 ));
@@ -29,4 +29,3 @@ const app = (
 )
 
 ReactDOM.render(app, document.getElementById('root'));
-registerServiceWorker();

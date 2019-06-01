@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Benefits = (props) => 
+const Benefits = ({benefitsArray}) => 
 <ul>
-    {props.benefitsArray.map(i => {
+    {benefitsArray.map(i => {
         return <li>{i}</li>
     })}
 </ul>

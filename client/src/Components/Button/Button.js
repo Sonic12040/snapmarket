@@ -1,17 +1,17 @@
 import React from "react";
 
 
-const Button = (props) => {
+const Button = ({onClick, name}) => {
     const handleClick = () => {
-        props.onClick(props.name)
-        document.getElementById(props.name).classList.toggle("buttonClicked");
+        onClick(name)
+        document.getElementById(name).classList.toggle("buttonClicked");
     }
 
 return(
     <div>
-        <div className="button-1" id={props.name} onClick={()=>handleClick()}>
+        <div className="button-1" id={name} onClick={()=>handleClick()}>
             <div className="left-push"></div>
-            <a className="z-index-3">{props.name}</a>
+            <a className="z-index-3">{name}</a>
         </div>
     </div>
 )
