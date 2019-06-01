@@ -3,15 +3,11 @@ import ReactDOM from 'react-dom';
 import { Provider } from "react-redux";
 import { createStore, applyMiddleware, compose} from "redux";
 import thunk from "redux-thunk";
-import './index.css';
 import App from './App';
 import reducer from "./store/reducers/reducer";
 
-
-const enhancer = applyMiddleware(thunk);
-
 const store = createStore(reducer, compose(
-    enhancer,
+    applyMiddleware(thunk),
     window.devToolsExtension ? window.devToolsExtension() : f => f
 ));
 

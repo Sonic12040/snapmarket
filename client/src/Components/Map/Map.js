@@ -10,14 +10,6 @@ import { handleMarketClick } from "../../store/actions/searchActions"
 const API_KEY = process.env.REACT_APP_API_KEY;
 
 class Map extends Component {
-// Default Center and Zoom levels for the map
-  static defaultProps = {
-    center: {
-      lat: 38.8283,
-      lng: -98.5795
-    },
-    zoom: 4
-  };
 // Determines which InfoWindow to return in the Render
   infoWindowReturn() {
     let displayContent = this.props.targetedMarket;
@@ -102,5 +94,13 @@ const mapDispatchToProps = (dispatch)=> ({
   onHandleMarketClick: (Address) =>
     dispatch(handleMarketClick(Address))
 });
+
+Map.defaultProps = {
+  center: {
+    lat: 38.8283,
+    lng: -98.5795
+  },
+  zoom: 4
+}
 // Exports
 export default connect(mapStateToProps, mapDispatchToProps)(Map);
