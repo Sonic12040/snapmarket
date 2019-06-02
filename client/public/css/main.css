@@ -209,6 +209,7 @@ a:active {
 
 .fs-fredericka {
     font-family: 'Fredericka the Great', cursive;
+    font-display: swap;
 }
 
 .fs-didact {
