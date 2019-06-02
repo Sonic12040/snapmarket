@@ -14,6 +14,7 @@ return (
                 placeholder="Enter your Zipcode"
                 value={value}
                 onChange={onSearchChange}
+                aria-label="Zip Code"
             />
             <a href="/" type="submit"><img  alt="search" className="search-icon" src={searchIcon} /></a>
          </form>
