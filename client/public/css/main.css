@@ -214,6 +214,7 @@ a:active {
 
 .fs-didact {
     font-family: 'Didact Gothic', sans-serif;
+    font-display: swap;
 }
 
 .fs-6rem {
