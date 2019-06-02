@@ -2,8 +2,6 @@
         max-width: 3000px;
         margin-left: auto;
         margin-right: auto;
- 
-
 }
 
 a:link {
@@ -22,28 +20,12 @@ a:active {
     text-decoration: none;
 }
 
-.row {
-      max-width: 1170px;
-      width: 100%;
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: 0;
-      margin-bottom: 0;
-}
-
 .zipcodeSearch {
     position: relative;
     width: 100%;
     top: 50%;
     left: 0;
     z-index: 600;
-}
-
-.border-box {
-    box-sizing: border-box;
-}
-.b-cover {
-    background-size: cover;
 }
 
 .button-1{
@@ -106,36 +88,12 @@ a:active {
     background-color: #E5DCD1;
 }
 
-.bg-8CB8D2 {
-    background-color: #8CB8D2;
-}
-
-.bg-FFBF77 {
-    background-color: #FFBF77;
-}
-
-.b-s {
-    border: solid;
-}
-
-.b-w {
-    border-width: thin;
-}
-
 .color-2D2D2D {
     color: #2D2D2D; 
 }
 
-.color-FBFEFF {
-    color: #FBFEFF;
-}
-
 .color-E5DCD1 {
     color: #E5DCD1;
-}
-
-.color-8CB8D2 {
-    color: #8CB8D2;
 }
 
 .color-FFBF77 {
@@ -146,31 +104,12 @@ a:active {
     justify-content: center;
 }
 
-.content {
-    min-height: calc(100vh - 70px);
-}
-
 .d-s {
     filter: drop-shadow(0 0 0.75rem #FBFEFF);
 }
 
 .d-f {
     display: flex;
-}
-.d-i {
-    display: inline;
-}
-.d-ltr {
-    direction: ltr;
-}
-.d-n {
-    display: none; 
-}
-
-.expand {
-    height: 0px;
-    overflow: hidden;
-    transition: height 1s;
 }
 
 .fade-in {
@@ -190,27 +129,6 @@ a:active {
 	}
 }
 
-.fade-in2 {
-	opacity: 1;
-	animation-name: fadeInOpacity2;
-	animation-iteration-count: 1;
-	animation-timing-function: ease-in;
-    animation-duration: 4s;
-}
-
-@keyframes fadeInOpacity2 {
-	0% {
-		opacity: 0;
-    }
-	100% {
-		opacity: 1;
-	}
-}
-
-.fs-6rem {
-    font-size: 6.25rem; 
-}
-
 .fs-5em {
     font-size: 5em;
 }
@@ -221,10 +139,6 @@ a:active {
 
 .fs-1-5rem {
     font-size: 1.5rem;
-}
-
-.fs-2rem {
-    font-size: 2.5rem;
 }
 
 .f-bold {
@@ -268,34 +182,6 @@ input#form-bar:-moz-placeholder {
 input#form-bar:-ms-placeholder {
     transition: opacity 0.45s ease; 
     opacity: 0;
-}    
-
-.f-e {
-    justify-content: flex-end;
-}
-
-.f-s {
-    justify-content: flex-start;
-}
-
-.flex-nowrap {
-    flex-wrap: nowrap;
-}
-
-.flex-auto {
-    flex: auto;
-}
-
-.flex-basis {
-    flex-basis: auto;
-}
-
-.flex-grow-1 {
-    flex-grow: 1;
-}
-
-.flex-dr {
-    flex-direction: row;
 }
 
 .foot {
@@ -309,51 +195,8 @@ input#form-bar:-ms-placeholder {
     background-color: #E5DCD1;
 }
 
-.height100 {
-    height: 100%; 
-}
-
 .height70vh {
     height: 70vh;
-}
-
-.height80 {
-    height: 80%;
-}
-
-.height10 {
-    height: 10%; 
-}
-
-.height30vh {
-    height: 30vh; 
-}
-
-.height25vh {
-    height: 25vh;
-}
-
-.height600px {
-    height: 600px; 
-}
-
-.height200px {
-    height: 200px;
-}
-
-.icons {
-    width:2em;
-    height:2em;
-}
-
-.images {
-    height: 230px; 
-    width: 153px; 
-}
-
-.image-auto {
-    max-width: 100%;
-    height: auto;
 }
 
 input[type=text-newpost] {
@@ -376,10 +219,6 @@ input[type=password] {
     margin: 0 0 15px 0;
 }
 
-.jc-center {
-    justify-content: center;
-}
-
 .l-h1 {
     line-height: 0.5;
 }
@@ -389,116 +228,18 @@ input[type=password] {
     height: auto;
 }
 
-.ma {
-    margin: auto;
+.mt-1em {
+    margin-top: 1em; 
 }
 
-.ml-a {
-    margin-left: auto;
+.mb-2em {
+    margin-bottom: 2em;
 }
 
-.mr-a {
-    margin-right: auto;
-}
-
-.mt-30vh {
-    margin-top: 30vh;
-}
-
-.ml-75 {
-    margin-left: 75%; 
-}
-
-.ml-1em {
-    margin-left: 1em; 
-}
-
-.ml-01em {
-    margin-left: .1em; 
-}
-
-.ml-3em {
-    margin-left: 3em;
-}
-
-.mr-3em {
-    margin-right: 3em;
-}
-
-  .mr-01em {
-    margin-right: .1em;
-  }
-
-  .mt-3em {
-    margin-top: 3em;
-  }
-
-  .mt-05em {
-    margin-top: .5em;
-  }
-  .mt-1em {
-      margin-top: 1em; 
-  }
-
-  .mb-3em {
-    margin-bottom: 3em;
-  }
-  .mb-2em {
-      margin-bottom: 2em;
-  }
-
-  .mb-1em {
-    margin-bottom: 1em;
-  }
-
-.pad-03em {
-    padding: 0.3em;
-}
 .pad-2em {
     padding: 2em; 
 }
 
-.pad-15px {
-    padding: 0px 15px 0 0;
-}
-.pad-20px {
-    padding: 20px 0 0 0;
-}
-.pad-b-20px {
-    padding-bottom: 20px;
-}
-.pad-40px {
-    padding: 40px 0 0 0;
-}
-.pad-30px {
-    padding: 30 30 30 30;
-}
-.pl-3em {
-    padding-left: 3em;
-}
-.pr-3em {
-    padding-right: 3em;
-}
-
-.pos-a {
-    position: absolute;
-}
-.pos-r {
-    position: relative;
-}
-.pos-f {
-    position: fixed;
-}
-
-.op:hover{
-    opacity: 0.5;
-}
-.op-50 {
-    opacity: 0.5;
-}
-.o-scroll {
-    overflow: scroll;
-}
 .overflow-h {
     overflow-x: hidden;
 }
@@ -512,60 +253,12 @@ input[type=password] {
     right: -20px;
 }
 
-.s-b {
-    justify-content: space-between;
-}
-
-.s-e {
-    justify-content: space-evenly;
-}
-
-.t-d {
-    text-decoration: none;
-}
-
-.t-a-r{
-    text-align: right;
-}
 .t-a-c {
     text-align: center;
 }
 
-.w-100per {
-    width: 100%;
-}
-.width-100vw {
-    width: 100vw;
-}
-.width-7vw {
-    width: 7vw;
-}
-.width-50 {
-    width: 50%;
-}
-
-.wrapper {
-    transition: transform 0.3s ease;
-}
-
-.z-index-1 {
-    z-index: 1;
-}
-.z-index-2 {
-    z-index: 2;
-}
 .z-index-3 {
     z-index: 3;
-}
-
-.bounce-1sec {
-    position: relative;
-    -webkit-animation:bounce 1s infinite;
-  }
-
-.bounce-2sec {
-    position: relative;
-    -webkit-animation:bounce 2s infinite;
 }
 
 /* HEY MEL, YOU WANT TO CHANGE THIS! */
