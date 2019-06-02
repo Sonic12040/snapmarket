@@ -60,9 +60,8 @@ class Main extends Component {
     render() {
         return(
             <div className="height70vh overflow-h bg-FBFEFF l-h1">
-                <div className="t-a-c fs-didact">
-                    <div className="mb-2em fade-in mt-1em">enter your preferences below</div>
-                    <div className="mb-2em fade-in2">or scroll down to see the map</div>
+                <div className="t-a-c">
+                    <div className="mb-2em fade-in mt-1em">Select your benefits below.</div>
                     <div className="d-f center">{this.state.payments.map(payment => (
                         <Button name={payment.name} onClick={this.toggleClass} />
                     ))}
